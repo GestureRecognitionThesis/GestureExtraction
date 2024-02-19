@@ -1,5 +1,4 @@
 import cv2 as cv
-import os
 
 
 def extract(video_path: str) -> list:
