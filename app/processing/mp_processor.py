@@ -3,6 +3,7 @@ import cv2 as cv
 
 
 def process(frame):
+    # Set up MediaPipe Hands.
     use_static_image_mage = True
     min_detection_confidence = 0.5
 
@@ -14,9 +15,7 @@ def process(frame):
         min_detection_confidence=min_detection_confidence,
     )
 
-    # Read an image from the file
-    #image = cv.imread(frame)
-
+    # Convert the BGR image to RGB before processing.
     processed_image = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
 
     # Process the image and draw landmarks.
@@ -30,11 +29,11 @@ def process(frame):
             print(f'Hand {hand_index + 1}:')
             for id, landmark in enumerate(hand_landmarks.landmark):
                 print(f'\tNormalized landmkars {id}: (x: {landmark.x}, y: {landmark.y}, z: {landmark.z})')
-                # Landmark coordinates are normalized to [0,1]. Thus, you might want to convert them back to the image coordinates.
+                # Landmark coordinates are normalized to [0,1]. Thus, you might want to convert them back to the
+                # image coordinates.
                 landmark_x = int(landmark.x * frame.shape[1])
                 landmark_y = int(landmark.y * frame.shape[0])
                 print(f'\tLandmark {id}: (x: {landmark_x}, y: {landmark_y}, z: {landmark.z})')
-
 
     # Display the image.
     cv.imshow('Hand Landmarks', frame)

@@ -6,7 +6,7 @@ def extract(video_path: str) -> list:
     cap = cv.VideoCapture(video_path)
 
     # Read the video frame by frame
-    frame_count : int = 0
+    frame_count: int = 0
 
     # Check if video opened successfully
     if not cap.isOpened():
@@ -14,7 +14,7 @@ def extract(video_path: str) -> list:
         exit()
 
     # Create a list to store the frames
-    frames : list = []
+    frames: list = []
 
     while True:
         # Read frame by frame
