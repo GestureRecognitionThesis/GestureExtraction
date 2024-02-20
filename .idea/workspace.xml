@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Frames extracted as nparray can be used for processing now">
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="File cleanup">
+      <change afterPath="$PROJECT_DIR$/app/processing/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/extraction/frame_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extraction/frame_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing/mp_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing/mp_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +182,7 @@
       <updated>1708265336767</updated>
       <workItem from="1708265344687" duration="258000" />
       <workItem from="1708265615680" duration="3767000" />
-      <workItem from="1708271910420" duration="5900000" />
+      <workItem from="1708271910420" duration="7532000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -221,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708425676306</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="File cleanup">
+      <option name="closed" value="true" />
+      <created>1708425941660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708425941660</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,15 +241,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added gitignore" />
     <MESSAGE value="Added frame_extractor.py" />
-    <MESSAGE value="File cleanup" />
     <MESSAGE value="Append landmarks and extract norm. coords and relative coords" />
     <MESSAGE value="Frames extracted as nparray can be used for processing now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Frames extracted as nparray can be used for processing now" />
+    <MESSAGE value="File cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="File cleanup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1708425877981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1708431022117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
   </component>
