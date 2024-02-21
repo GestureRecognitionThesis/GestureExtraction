@@ -4,3 +4,4 @@ class FrameData:
         self.hand: int = hand
         self.normalized: list = normalized
         self.relative: list = relative
+        self.direct_graph: str = ""

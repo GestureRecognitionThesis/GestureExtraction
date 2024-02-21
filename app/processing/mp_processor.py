@@ -32,6 +32,7 @@ def process(frame: numpy.ndarray) -> list:
             # print(f'Hand {hand_index + 1}:')
             for id, landmark in enumerate(hand_landmarks.landmark):
                 # print(f'\tNormalized landmkars {id}: (x: {landmark.x}, y: {landmark.y}, z: {landmark.z})')
+
                 # Landmark coordinates are normalized to [0,1]. Thus, you might want to convert them back to the
                 # image coordinates.
                 landmark_x = int(landmark.x * frame.shape[1])
@@ -39,7 +40,7 @@ def process(frame: numpy.ndarray) -> list:
                 frame_data: FrameData = FrameData(id, hand_index, [landmark.x, landmark.y, landmark.z],
                                                   [landmark_x, landmark_y, landmark.z])
                 data_from_all_frames.append(frame_data)
-                # print(f'\tLandmark {id}: (x: {landmark_x}, y: {landmark_y}, z: {landmark.z})')
+                print(f'\tLandmark {id}: (x: {landmark_x}, y: {landmark_y}, z: {landmark.z})')
 
     # Display the image.
     cv.imshow('Hand Landmarks', frame)
