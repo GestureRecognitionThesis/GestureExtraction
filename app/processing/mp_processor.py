@@ -40,14 +40,14 @@ def process(frame: numpy.ndarray) -> list:
                 frame_data: FrameData = FrameData(id, hand_index, [landmark.x, landmark.y, landmark.z],
                                                   [landmark_x, landmark_y, landmark.z])
                 data_from_all_frames.append(frame_data)
-                print(f'\tLandmark {id}: (x: {landmark_x}, y: {landmark_y}, z: {landmark.z})')
+                #print(f'\tLandmark {id}: (x: {landmark_x}, y: {landmark_y}, z: {landmark.z})')
 
     # Display the image.
-    cv.imshow('Hand Landmarks', frame)
-    cv.waitKey(0)
+    #cv.imshow('Hand Landmarks', frame)
+    #cv.waitKey(0)
 
     # Clean up
     cv.destroyAllWindows()
     hands.close()
-    print(f'Processed {len(data_from_all_frames)} landmarks')
+    #print(f'Processed {len(data_from_all_frames)} landmarks')
     return data_from_all_frames
