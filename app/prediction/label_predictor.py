@@ -40,7 +40,7 @@ def prepare_sequences(all_sequences: list, all_sequence_labels: list) -> Tuple[l
         sequences.extend(sequence)
         if str.lower(all_sequence_labels[i]) == "can":
             labels.extend([[1, 0, 0]] * len(sequence))
-        else:
+        elif str.lower(all_sequence_labels[i]) == "peace":
             labels.extend([[0, 1, 0]] * len(sequence))
 
     # Pad sequences to ensure equal length
@@ -72,5 +72,6 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
     # Train the model
     model.fit(padded_sequences, labels, epochs=10, batch_size=1, validation_split=0.2)
 
-    if not save:
+    if save:
+        print("Model training complete.")
         save_model(model, "gesture_recognition_model.keras")
