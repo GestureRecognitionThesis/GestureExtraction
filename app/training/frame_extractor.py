@@ -1,6 +1,6 @@
 import cv2 as cv
 
-
+#This is the new file
 def extract(video_path: str) -> list:
     # Open the video file
     cap = cv.VideoCapture(video_path)
