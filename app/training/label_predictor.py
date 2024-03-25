@@ -42,10 +42,13 @@ def prepare_sequences(all_sequences: list, all_sequence_labels: list) -> Tuple[l
             labels.extend([[1, 0, 0]] * len(sequence))
         elif str.lower(all_sequence_labels[i]) == "peace":
             labels.extend([[0, 1, 0]] * len(sequence))
+        elif str.lower(all_sequence_labels[i]) == "thumb":
+            labels.extend([[0, 0, 1]] * len(sequence))
 
     # Pad sequences to ensure equal length
     max_length = max(len(seq) for seq in sequences)
     padded_sequences = pad_sequences(sequences, maxlen=max_length, padding='post', dtype="float32")
+    print("** MAX LENGTH: ", max_length, " **")
 
     return padded_sequences, labels, max_length
 

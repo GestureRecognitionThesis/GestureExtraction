@@ -56,7 +56,7 @@ def extract_and_save_data():
             continue
         print("Processing: " + file)
         video_path = f'./data/videos/{file}'
-        data_path = './data/test/'
+        data_path = './data/train/'
         extracted_frames = extract(video_path)
         all_data: list = []
         for frame in extracted_frames:
@@ -101,7 +101,7 @@ def find_json_file_names(sub_path: str = ''):
 
 
 def find_video_file_names():
-    data_path = '../data/videos/'
+    data_path = './data/videos/'
     return os.listdir(data_path)
 
 
@@ -109,7 +109,7 @@ def load_and_use_model():
     # Load the model
     model = load_model('gesture_recognition_model.keras')
     # Predict
-    data_path = './data/can1.json'
+    data_path = './data/test/thumb1.json'
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
@@ -121,7 +121,7 @@ def load_and_use_model():
     padded_sequences = np.array(padded_sequences)
     prediction = model.predict(padded_sequences)
     predicted_labels = np.argmax(prediction, axis=1)
-    class_labels = {0: "Can", 1: "Peace"}  # Update this dictionary with your class labels
+    class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}  # Update this dictionary with your class labels
 
     # Map predicted class indices to their corresponding labels
     predicted_labels = [class_labels[idx] for idx in predicted_labels]
@@ -131,6 +131,6 @@ def load_and_use_model():
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
-    extract_and_save_data()
+    #extract_and_save_data()
     #load_data_input_to_model(True, 'train')
-    #load_and_use_model()
+    load_and_use_model()
