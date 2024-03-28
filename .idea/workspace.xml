@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Workspace cleanup">
-      <change afterPath="$PROJECT_DIR$/app/data/videos/thumb1.MOV" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Added third sequence">
+      <change afterPath="$PROJECT_DIR$/app/model_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/status_router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/can1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/peace1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/test/can1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/test/can1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/train/can1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/train/can1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gesture_recognition_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/gesture_recognition_model.keras" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/training/label_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/label_predictor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,9 +162,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="model_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recognizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/model_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.model_main" />
         <item itemvalue="Python.extract_frames (1)" />
         <item itemvalue="Python.extract_frames" />
       </list>
@@ -193,7 +212,7 @@
       <workItem from="1708265615680" duration="3767000" />
       <workItem from="1708271910420" duration="11181000" />
       <workItem from="1710245748956" duration="4000" />
-      <workItem from="1710321628340" duration="23899000" />
+      <workItem from="1710321628340" duration="25278000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -291,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711371345622</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added third sequence">
+      <option name="closed" value="true" />
+      <created>1711371797298</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371797298</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,12 +336,13 @@
     <MESSAGE value="Model configuration finished, just need to train on several videos" />
     <MESSAGE value="Added load from folders, tested another sequences" />
     <MESSAGE value="Workspace cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace cleanup" />
+    <MESSAGE value="Added third sequence" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added third sequence" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1711371726554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1711630556174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
   </component>
