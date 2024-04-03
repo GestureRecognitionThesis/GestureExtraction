@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Added third sequence">
-      <change afterPath="$PROJECT_DIR$/app/presentation/gesture_recognition_model.keras" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Model router">
+      <change beforePath="$PROJECT_DIR$/.idea/Recognizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Recognizer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/presentation/use_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/presentation/use_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "Python.extract_frames.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model_main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/nich/Desktop/Master Thesis/GestureExtraction/app/presentation/model",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_frames.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nich/Desktop/Master Thesis/GestureExtraction/app/presentation/model&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/presentation/model" />
@@ -73,9 +76,10 @@
       <recent name="$PROJECT_DIR$/app/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__main__">
+  <component name="RunManager" selected="Python.model_main">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -98,6 +102,7 @@
     </configuration>
     <configuration name="extract_frames (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -120,6 +125,7 @@
     </configuration>
     <configuration name="extract_frames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -142,6 +148,7 @@
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -164,6 +171,7 @@
     </configuration>
     <configuration name="model_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -186,8 +194,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.model_main" />
+        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.extract_frames (1)" />
         <item itemvalue="Python.extract_frames" />
       </list>
@@ -214,6 +222,7 @@
       <workItem from="1710245748956" duration="4000" />
       <workItem from="1710321628340" duration="25278000" />
       <workItem from="1711754991819" duration="2314000" />
+      <workItem from="1712175586126" duration="2778000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -325,6 +334,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added gitignore" />
     <MESSAGE value="Added frame_extractor.py" />
@@ -341,11 +361,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added third sequence" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1711756245425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1712176298092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
+    <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1711972858110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1712150922053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

@@ -7,6 +7,11 @@ fastApi = FastAPI()
 fastApi.include_router(status_router)
 fastApi.include_router(model_router)
 
-if __name__ == "__main__":
+
+def runApi():
     uvicorn.run(fastApi, host="0.0.0.0", port=8000)
+
+
+if __name__ == "__main__":
+    runApi()
 

@@ -77,6 +77,36 @@ def extract_and_save_data():
     """
 
 
+# Load a single video, without saving to a json file, and make the model predict the gesture
+def load_single_video_and_predict():
+    video_path = '../data/videos/can1.MOV'
+    extracted_frames = extract(video_path)
+    all_data: list = []
+    for frame in extracted_frames:
+        all_data.append(process_mp(frame))
+    data_dict = convert_list_data_to_dict(all_data)
+    print(data_dict)
+
+
+def convert_list_data_to_dict(data: list):
+    dict_data = {}
+    for i, item in enumerate(data, start=1):
+        frame_data_by_landmark = {}
+        for frame_data in item:
+            landmark = "Landmark" + str(frame_data.landmark + 1)
+            if landmark not in frame_data_by_landmark:
+                frame_data_by_landmark[landmark] = []
+
+            frame_data_list = [
+                frame_data.relative[0],
+                frame_data.relative[1],
+                frame_data.relative[2],
+            ]
+            frame_data_by_landmark[landmark].append(frame_data_list)
+        dict_data[f"frame{i}"] = frame_data_by_landmark
+    return dict_data
+
+
 def load_data_input_to_model(save: bool, sub_path: str = ''):
     # data path to json file
     files: list = find_json_file_names(sub_path)
@@ -94,7 +124,6 @@ def load_data_input_to_model(save: bool, sub_path: str = ''):
     define_and_train_model(sequences, labels, save)
 
 
-
 def find_json_file_names(sub_path: str = ''):
     data_path = './data/' + sub_path + '/'
     return os.listdir(data_path)
@@ -109,12 +138,13 @@ def load_and_use_model():
     # Load the model
     model = load_model('gesture_recognition_model.keras')
     # Predict
-    data_path = './data/test/thumb1.json'
+    data_path = './data/test/can1.json'
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
+    print(data)
     sequences: list = []
-    labels: list = [file_name, file_name]
+    labels: list = [file_name]
     result = fit_data_to_sequence(data)
     sequences.append(result)
     padded_sequences, labels, max_length = prepare_sequences(sequences, labels)
@@ -131,6 +161,7 @@ def load_and_use_model():
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
-    #extract_and_save_data()
-    #load_data_input_to_model(True, 'train')
-    load_and_use_model()
+    # extract_and_save_data()
+    # load_data_input_to_model(True, 'train')
+    #load_and_use_model()
+    load_single_video_and_predict()
