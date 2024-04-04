@@ -4,6 +4,7 @@ from training import *
 from keras.models import load_model
 import json
 import os
+from tqdm import tqdm
 
 
 # all_data[0] is the first frame
@@ -51,17 +52,26 @@ def save_to_json(path: str, data: list, file_name: str):
 
 def extract_and_save_data():
     files: list = find_video_file_names()
+    progres_bar = tqdm(total=len(files) * 3, unit='iteration')  # because we have 3 steps
     for file in files:
         if str(file).split(".")[1] != "MOV":
             continue
-        print("Processing: " + file)
+        #print("Processing: " + file)
+        progres_bar.set_description(f"Processing file {file}")
         video_path = f'./data/videos/{file}'
         data_path = './data/train/'
+        progres_bar.update(1)
+        progres_bar.set_description(f"Extracting frames from {file}")
         extracted_frames = extract(video_path)
         all_data: list = []
+        progres_bar.update(1)
+        progres_bar.set_description(f"MediaPipe processing {file}")
         for frame in extracted_frames:
             all_data.append(process_mp(frame))
+        progres_bar.update(1)
+        progres_bar.set_description(f"Saving to {file} to json")
         save_to_json(data_path, all_data, str(file).split(".")[0])
+    progres_bar.close()
     """
     video_path = '../data/videos/can1.MOV'
     data_path = './data/'
@@ -161,7 +171,7 @@ def load_and_use_model():
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
-    # extract_and_save_data()
+    extract_and_save_data()
     # load_data_input_to_model(True, 'train')
-    load_and_use_model()
-    #load_single_video_and_predict()
+    # load_and_use_model()
+    # load_single_video_and_predict()

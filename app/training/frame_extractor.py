@@ -22,7 +22,7 @@ def extract(video_path: str) -> list:
 
         # If frame is read correctly ret is True
         if not ret:
-            print("Can't receive frame (stream end?). Exiting ...")
+            #print("Can't receive frame (stream end?). Exiting ...")
             break
 
         # Save frame as JPEG file
@@ -31,5 +31,5 @@ def extract(video_path: str) -> list:
 
     # When everything done, release the capture
     cap.release()
-    print(f'Extracted {frame_count} frames')
+    #print(f'Extracted {frame_count} frames')
     return frames
