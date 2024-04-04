@@ -53,6 +53,21 @@ def prepare_sequences(all_sequences: list, all_sequence_labels: list) -> Tuple[l
     return padded_sequences, labels, max_length
 
 
+def prepare_sequences_without_labels(all_sequences: list) -> Tuple[list, int]:
+    # Combine sequences and labels
+    sequences = []
+
+    for i, sequence in enumerate(all_sequences):
+        sequences.extend(sequence)
+
+    # Pad sequences to ensure equal length
+    max_length = max(len(seq) for seq in sequences)
+    padded_sequences = pad_sequences(sequences, maxlen=max_length, padding='post', dtype="float32")
+    print("** MAX LENGTH: ", max_length, " **")
+
+    return padded_sequences, max_length
+
+
 def define_and_train_model(all_sequences: list, all_sequence_labels: list, save: bool = False):
     # Prepare sequences and labels
     padded_sequences, labels, max_length = prepare_sequences(all_sequences, all_sequence_labels)

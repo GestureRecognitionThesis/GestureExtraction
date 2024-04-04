@@ -2,7 +2,7 @@ import tempfile
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
 from keras.models import load_model
-from training import extract, process_mp, fit_data_to_sequence, prepare_sequences
+from training import extract, process_mp, fit_data_to_sequence, prepare_sequences_without_labels
 import numpy as np
 
 model_router = APIRouter(prefix="/model")
@@ -36,8 +36,8 @@ async def upload_video(video_file: UploadFile = File(...)):
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
 
-@model_router.get("/predict")
-async def predict(video_file: UploadFile = UploadFile(...)):
+@model_router.post("/predict")
+async def predict(video_file: UploadFile = File(...)):
     # Read the binary data from the uploaded file
     video_data = await video_file.read()
     temp_video_file_path = create_temp_file_return_path(video_data)
@@ -50,7 +50,7 @@ async def predict(video_file: UploadFile = UploadFile(...)):
     data_dict = convert_list_data_to_dict(all_data)
     result = fit_data_to_sequence(data_dict)
     sequences: list = [result]
-    padded_sequences, labels, max_length = prepare_sequences(sequences, [])
+    padded_sequences, max_length = prepare_sequences_without_labels(sequences)
     padded_sequences = np.array(padded_sequences)
     prediction = model.predict(padded_sequences)
     predicted_labels = np.argmax(prediction, axis=1)
