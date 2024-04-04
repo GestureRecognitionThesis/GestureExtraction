@@ -92,4 +92,4 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
 
     if save:
         print("Model training complete.")
-        save_model(model, "gesture_recognition_model.keras")
+        save_model(model, "gesture_recognition_model_old.keras")

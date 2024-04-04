@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Added more videos for training">
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Progress bar and more json files">
+      <change afterPath="$PROJECT_DIR$/app/presentation/gesture_recognition_model_old.keras" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/train/can1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/train/can1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/train/thumb1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/train/thumb1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gesture_recognition_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/gesture_recognition_model.keras" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/presentation/gesture_recognition_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/presentation/gesture_recognition_model.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/training/label_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/label_predictor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,34 +39,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.extract_frames.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nich/Desktop/Master Thesis/GestureExtraction/app/presentation/model&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__main__.executor": "Run",
+    "Python.extract_frames.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.model_main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/nich/Desktop/Master Thesis/GestureExtraction/app/presentation",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/presentation" />
       <recent name="$PROJECT_DIR$/app/presentation/model" />
       <recent name="$PROJECT_DIR$/app/data" />
       <recent name="$PROJECT_DIR$/app/data/train" />
       <recent name="$PROJECT_DIR$/app/training" />
-      <recent name="$PROJECT_DIR$/data/results" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/presentation" />
@@ -75,7 +76,7 @@
       <recent name="$PROJECT_DIR$/app/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.model_main">
+  <component name="RunManager" selected="Python.__main__">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,8 +189,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.model_main" />
         <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.model_main" />
         <item itemvalue="Python.extract_frames (1)" />
         <item itemvalue="Python.extract_frames" />
       </list>
@@ -338,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712232623459</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Progress bar and more json files">
+      <option name="closed" value="true" />
+      <created>1712233327454</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712233327454</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,10 +379,11 @@
     <MESSAGE value="Added third sequence" />
     <MESSAGE value="Now support uploading videos and returning the most common label" />
     <MESSAGE value="Added more videos for training" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more videos for training" />
+    <MESSAGE value="Progress bar and more json files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Progress bar and more json files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1712232697553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1712238659242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1712228723834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />

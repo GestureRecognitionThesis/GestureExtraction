@@ -171,7 +171,7 @@ def load_and_use_model():
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
-    extract_and_save_data()
-    # load_data_input_to_model(True, 'train')
+    #extract_and_save_data()
+    load_data_input_to_model(True, 'train')
     # load_and_use_model()
     # load_single_video_and_predict()
