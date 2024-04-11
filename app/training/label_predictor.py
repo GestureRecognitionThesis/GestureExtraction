@@ -154,3 +154,5 @@ def define_and_train_model_v2(all_sequences: list, all_sequence_labels: list, sa
         print("Model training complete.")
         save_model(model, "graph_gesture_model.keras")
 
+
+
