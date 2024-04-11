@@ -3,7 +3,7 @@ import requests
 
 def test_upload_video():
     url = "http://localhost:8000/model/predict"  # Adjust the URL to match your endpoint
-    files = {'video_file': ('uploaded_video.mov', open('../app/data/videos/thumb1.MOV', 'rb'), 'video/quicktime')}
+    files = {'video_file': ('uploaded_video.mov', open('../app/data/videos/valid/thumb1.MOV', 'rb'), 'video/quicktime')}
     headers = {}  # No need to explicitly set Content-Type
 
     try:

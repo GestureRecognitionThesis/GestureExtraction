@@ -1,7 +1,7 @@
 from .constants import FrameData
 
 
-def calculate_line_equation(point1: FrameData, point2: FrameData, id: int = 0) -> str:
+def calculate_line_equation(point1: FrameData, point2: FrameData) -> str:
     # x = 0, y = 1, z = 2
     c_point1: FrameData = point1
     c_point2: FrameData = point2

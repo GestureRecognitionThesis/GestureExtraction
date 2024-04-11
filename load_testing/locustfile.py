@@ -11,6 +11,6 @@ class StatusUser(HttpUser):
 
     @task
     def predict_with_model(self):
-        with open('../app/data/videos/thumb1.MOV', 'rb') as f:
+        with open('../app/data/videos/valid/thumb1.MOV', 'rb') as f:
             self.client.post("/model/predict", files={"video_file": f})
 

@@ -12,15 +12,15 @@ from tqdm import tqdm
 # the length of all_data[0] is equal to the total amount of landmarks processed in the frame
 
 def calculate_graphs(data: list):
-    for i in range(len(data)):
-        for j in range(len(data[i])):
+    for i in range(len(data)):  # every frame
+        for j in range(len(data[i])):  # every landmark
             if i == 0:
                 data[i][j].direct_graph = "firstFrame"
                 continue
-            data[i][j].direct_graph = calculate_line_equation(data[i - 1][3], data[i][3], i)
+            data[i][j].direct_graph = calculate_line_equation(data[i - 1][j], data[i][j])
 
 
-def save_to_json(path: str, data: list, file_name: str):
+def save_to_json(path: str, data: list, file_name: str, v2: bool = False):
     # Initialize an empty dictionary to store the JSON data
     json_data = {}
 
@@ -31,18 +31,26 @@ def save_to_json(path: str, data: list, file_name: str):
 
         # Iterate over each FrameData object in the item
         for frame_data in item:
+            if frame_data.direct_graph == "firstFrame" and v2:
+                continue
             landmark = "Landmark" + str(frame_data.landmark + 1)
-            if landmark not in frame_data_by_landmark:
-                frame_data_by_landmark[landmark] = []
+            if v2:
+                frame_data_by_landmark[landmark] = frame_data.direct_graph
+            else:
+                if landmark not in frame_data_by_landmark:
+                    frame_data_by_landmark[landmark] = []
 
-            frame_data_list = [
-                frame_data.relative[0],
-                frame_data.relative[1],
-                frame_data.relative[2],
-            ]
-            frame_data_by_landmark[landmark].append(frame_data_list)
+                frame_data_list = [
+                    frame_data.relative[0],
+                    frame_data.relative[1],
+                    frame_data.relative[2],
+                ]
+                frame_data_by_landmark[landmark].append(frame_data_list)
 
         # Add frame data by landmark to the JSON data dictionary
+        if v2:
+            if i == 1:
+                continue
         json_data[f"frame{i}"] = frame_data_by_landmark
 
     # Write the dictionary to a JSON file
@@ -50,16 +58,22 @@ def save_to_json(path: str, data: list, file_name: str):
         json.dump(json_data, json_file, indent=4)
 
 
-def extract_and_save_data():
-    files: list = find_video_file_names()
+def extract_and_save_data(subpath: str = '', v2: bool = False, test: bool = False):
+    if test:
+        files: list = find_test_video_file_names()
+    else:
+        files: list = find_video_file_names()
     progres_bar = tqdm(total=len(files) * 3, unit='iteration')  # because we have 3 steps
     for file in files:
         if str(file).split(".")[1] != "MOV":
             continue
-        #print("Processing: " + file)
+        # print("Processing: " + file)
         progres_bar.set_description(f"Processing file {file}")
-        video_path = f'./data/videos/{file}'
-        data_path = './data/train/'
+        if test:
+            video_path = f'./data/videos/test/{file}'
+        else:
+            video_path = f'./data/videos/valid/{file}'
+        data_path = f'./data/train/{subpath}/'
         progres_bar.update(1)
         progres_bar.set_description(f"Extracting frames from {file}")
         extracted_frames = extract(video_path)
@@ -69,8 +83,11 @@ def extract_and_save_data():
         for frame in extracted_frames:
             all_data.append(process_mp(frame))
         progres_bar.update(1)
+        if v2:
+            progres_bar.set_description(f"Calculating graphs for file {file}")
+            calculate_graphs(all_data)
         progres_bar.set_description(f"Saving to {file} to json")
-        save_to_json(data_path, all_data, str(file).split(".")[0])
+        save_to_json(data_path, all_data, str(file).split(".")[0], v2)
     progres_bar.close()
     """
     video_path = '../data/videos/can1.MOV'
@@ -140,7 +157,13 @@ def find_json_file_names(sub_path: str = ''):
 
 
 def find_video_file_names():
-    data_path = './data/videos/'
+    data_path = './data/videos/valid/'
+    videos = os.listdir(data_path)
+    return videos
+
+
+def find_test_video_file_names():
+    data_path = './data/videos/test/'
     return os.listdir(data_path)
 
 
@@ -171,7 +194,8 @@ def load_and_use_model():
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
-    #extract_and_save_data()
-    load_data_input_to_model(True, 'train')
+    # extract_and_save_data(subpath="coordinates")
+    extract_and_save_data(subpath="graphs", v2=True)
+    # load_data_input_to_model(False, 'train/coordinates')
     # load_and_use_model()
     # load_single_video_and_predict()
