@@ -151,6 +151,24 @@ def load_data_input_to_model(save: bool, sub_path: str = ''):
     define_and_train_model(sequences, labels, save)
 
 
+def load_data_input_to_model_v2(save: bool, sub_path: str = ''):
+    # data path to json file
+    files: list = find_json_file_names(sub_path)
+    sequences: list = []
+    labels: list = []
+    for file in files:
+        print("Processing: " + file)
+        data_path = './data/' + sub_path + '/' + file
+        data: dict
+        file_name: str
+        data, file_name = load_json(data_path)
+        labels.append(file_name)
+        result = fit_data_to_sequence_v2(data)
+        sequences.append(result)
+    print(sequences)
+    define_and_train_model_v2(sequences, labels, save)
+
+
 def find_json_file_names(sub_path: str = ''):
     data_path = './data/' + sub_path + '/'
     return os.listdir(data_path)
@@ -195,7 +213,8 @@ def load_and_use_model():
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
 if __name__ == '__main__':
     # extract_and_save_data(subpath="coordinates")
-    extract_and_save_data(subpath="graphs", v2=True)
-    # load_data_input_to_model(False, 'train/coordinates')
+    # extract_and_save_data(subpath="graphs", v2=True)
+    # load_data_input_to_model(False, 'train/graphs')
+    load_data_input_to_model_v2(False, 'train/graphs')
     # load_and_use_model()
     # load_single_video_and_predict()
