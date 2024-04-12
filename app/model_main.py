@@ -148,7 +148,8 @@ def load_data_input_to_model(save: bool, sub_path: str = ''):
         labels.append(file_name)
         result = fit_data_to_sequence(data)
         sequences.append(result)
-    define_and_train_model(sequences, labels, save)
+    print(sequences)
+    #define_and_train_model(sequences, labels, save)
 
 
 def load_data_input_to_model_v2(save: bool, sub_path: str = ''):
@@ -166,7 +167,7 @@ def load_data_input_to_model_v2(save: bool, sub_path: str = ''):
         result = fit_data_to_sequence_v2(data)
         sequences.append(result)
     print(sequences)
-    define_and_train_model_v2(sequences, labels, save)
+    #define_and_train_model_v2(sequences, labels, save)
 
 
 def find_json_file_names(sub_path: str = ''):
@@ -189,7 +190,7 @@ def load_and_use_model():
     # Load the model
     model = load_model('gesture_recognition_model.keras')
     # Predict
-    data_path = './data/test/can1.json'
+    data_path = 'data/test/coordinates/can1.json'
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
@@ -215,7 +216,7 @@ if __name__ == '__main__':
     print("nice")
     # extract_and_save_data(subpath="coordinates")
     # extract_and_save_data(subpath="graphs", v2=True)
-    # load_data_input_to_model(False, 'train/graphs')
-    #load_data_input_to_model_v2(True, 'train/graphs')
+#load_data_input_to_model(False, 'test')
+    load_data_input_to_model_v2(True, 'test/graphs')
     # load_and_use_model()
     # load_single_video_and_predict()
