@@ -149,7 +149,7 @@ def load_data_input_to_model(save: bool, sub_path: str = ''):
         result = fit_data_to_sequence(data)
         sequences.append(result)
     print(sequences)
-    #define_and_train_model(sequences, labels, save)
+    define_and_train_model(sequences, labels, save)
 
 
 def load_data_input_to_model_v2(save: bool, sub_path: str = ''):
@@ -167,7 +167,7 @@ def load_data_input_to_model_v2(save: bool, sub_path: str = ''):
         result = fit_data_to_sequence_v2(data)
         sequences.append(result)
     print(sequences)
-    #define_and_train_model_v2(sequences, labels, save)
+    define_and_train_model(sequences, labels, save, True)
 
 
 def find_json_file_names(sub_path: str = ''):
@@ -211,12 +211,36 @@ def load_and_use_model():
     print("Raw Prediction:", prediction)
 
 
-# list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ] ]
+def load_and_use_new_model():
+    model = load_model('graph_model.keras')
+    # Predict
+    data_path = 'data/test/graphs/can1.json'
+    data: dict
+    file_name: str
+    data, file_name = load_json(data_path)
+    sequences: list = []
+    labels: list = [file_name]
+    result = fit_data_to_sequence_v2(data)
+    sequences.append(result)
+    padded_sequences, labels, max_length = prepare_sequences(sequences, labels)
+    padded_sequences = np.array(padded_sequences)
+    prediction = model.predict(padded_sequences)
+    predicted_labels = np.argmax(prediction, axis=1)
+    class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}  # Update this dictionary with your class labels
+
+    # Map predicted class indices to their corresponding labels
+    predicted_labels = [class_labels[idx] for idx in predicted_labels]
+    print("Predicted Labels:", predicted_labels)
+    print("Raw Prediction:", prediction)
+
+# list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (
+# FrameData) ] ]
 if __name__ == '__main__':
     print("nice")
     # extract_and_save_data(subpath="coordinates")
     # extract_and_save_data(subpath="graphs", v2=True)
-#load_data_input_to_model(False, 'test')
-    load_data_input_to_model_v2(True, 'test/graphs')
+    #load_data_input_to_model(True, 'train/coordinates')
+    #load_data_input_to_model_v2(True, 'train/graphs')
     # load_and_use_model()
+    load_and_use_new_model()
     # load_single_video_and_predict()

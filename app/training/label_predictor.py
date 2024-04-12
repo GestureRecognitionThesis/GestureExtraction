@@ -40,7 +40,7 @@ def fit_data_to_sequence_v2(data: dict):
     for frame_data in data.values():
         landmarks = []
         for landmark_value in frame_data.values():
-            landmarks.append(string_to_float32(landmark_value))
+            landmarks.append([string_to_float32(landmark_value)])
         sequences.append(landmarks)
     return sequences
 
@@ -94,7 +94,7 @@ def prepare_sequences_without_labels(all_sequences: list) -> Tuple[list, int]:
     return padded_sequences, max_length
 
 
-def define_and_train_model(all_sequences: list, all_sequence_labels: list, save: bool = False):
+def define_and_train_model(all_sequences: list, all_sequence_labels: list, save: bool = False, v2: bool = False):
     # Prepare sequences and labels
     padded_sequences, labels, max_length = prepare_sequences(all_sequences, all_sequence_labels)
 
@@ -102,9 +102,12 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
     padded_sequences = np.array(padded_sequences)
     labels = np.array(labels)
 
+    features = 1 if v2 else 3
+
+
     # Define the model
     model = Sequential([
-        LSTM(64, return_sequences=False, input_shape=(max_length, 3)),  # Assuming each data point has 4 features
+        LSTM(64, return_sequences=False, input_shape=(max_length, features)),  # Assuming each data point has 4 features
         Dense(3, activation='softmax')  # Assuming 3 output classes: "Fish", "Tank", "Nose"
     ])
 
@@ -117,8 +120,9 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
     model.fit(padded_sequences, labels, epochs=10, batch_size=1, validation_split=0.2)
 
     if save:
+        file_name = "graph_model.keras" if v2 else "gesture_recognition_model.keras"
         print("Model training complete.")
-        save_model(model, "gesture_recognition_model_old.keras")
+        save_model(model, filepath=file_name)
 
 
 def define_and_train_model_v2(all_sequences: list, all_sequence_labels: list, save: bool = False):
