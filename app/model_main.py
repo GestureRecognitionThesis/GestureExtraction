@@ -214,7 +214,7 @@ def load_and_use_model():
 def load_and_use_new_model():
     model = load_model('graph_model.keras')
     # Predict
-    data_path = 'data/test/graphs/can1.json'
+    data_path = 'data/test/graphs/peace1.json'
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
@@ -231,16 +231,15 @@ def load_and_use_new_model():
     # Map predicted class indices to their corresponding labels
     predicted_labels = [class_labels[idx] for idx in predicted_labels]
     print("Predicted Labels:", predicted_labels)
-    print("Raw Prediction:", prediction)
 
 # list [ [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (FrameData) ], [ 21 landmarks in here (
 # FrameData) ] ]
 if __name__ == '__main__':
     print("nice")
-    # extract_and_save_data(subpath="coordinates")
-    # extract_and_save_data(subpath="graphs", v2=True)
+    #extract_and_save_data(subpath="coordinates")
+    extract_and_save_data(subpath="graphs", v2=True)
     #load_data_input_to_model(True, 'train/coordinates')
     #load_data_input_to_model_v2(True, 'train/graphs')
     # load_and_use_model()
-    load_and_use_new_model()
+    #load_and_use_new_model()
     # load_single_video_and_predict()

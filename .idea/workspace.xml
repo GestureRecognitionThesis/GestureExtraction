@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Forgot to actually produce the model">
-      <change afterPath="$PROJECT_DIR$/data_new.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_old.txt" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Graph model works and can be used now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data structure.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/Data structure.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gesture_recognition_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/gesture_recognition_model.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can101.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can101.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can102.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can102.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can103.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can103.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can104.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can104.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can105.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can105.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/valid/can106.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/test/can106.MOV" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/training/label_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/label_predictor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "Python.extract_frames.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model_main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/nich/Desktop/Master Thesis/GestureExtraction/app/data/test/graphs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_frames.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nich/Desktop/Master Thesis/GestureExtraction/app/data/test/graphs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/data/test/graphs" />
@@ -83,11 +84,11 @@
       <recent name="$PROJECT_DIR$/app/presentation/model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos\test" />
       <recent name="$PROJECT_DIR$/app/data/test/coordinates" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos\valid" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\train\coordinates" />
       <recent name="$PROJECT_DIR$/app/presentation" />
-      <recent name="$PROJECT_DIR$/app/data/videos" />
     </key>
   </component>
   <component name="RunManager" selected="Python.model_main">
@@ -263,6 +264,8 @@
       <workItem from="1712175586126" duration="2778000" />
       <workItem from="1712702741097" duration="27000" />
       <workItem from="1712832337693" duration="9081000" />
+      <workItem from="1713188983224" duration="71000" />
+      <workItem from="1713448478409" duration="2006000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -432,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712845246406</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Graph model works and can be used now">
+      <option name="closed" value="true" />
+      <created>1712935073496</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712935073496</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,10 +481,11 @@
     <MESSAGE value="Added graph extraction for new approach" />
     <MESSAGE value="Model based on graph data can now be trained" />
     <MESSAGE value="Forgot to actually produce the model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot to actually produce the model" />
+    <MESSAGE value="Graph model works and can be used now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph model works and can be used now" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1712934368333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1713450854906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
