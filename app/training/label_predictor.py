@@ -1,7 +1,7 @@
 import hashlib
 import json
 import struct
-from typing import Tuple, Any
+from typing import Tuple, Any, List
 
 import numpy as np
 from keras import Sequential
@@ -30,7 +30,7 @@ def fit_data_to_sequence(data: dict):
         landmarks = []
         for landmark_data in frame.values():
             landmarks.append(list(landmark_data)[:3])  # Extract only the first 3 values
-        flattened_list = [item for sublist in landmarks for item in sublist]
+        flattened_list = [item for sublist in sequences for item in sublist if isinstance(item, (int, float))]
         sequences.append(flattened_list)
     return sequences
 
@@ -101,7 +101,6 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
     # Convert to numpy arrays
     padded_sequences = np.array(padded_sequences)
     labels = np.array(labels)
-
     features = 1 if v2 else 3
 
 
@@ -123,6 +122,7 @@ def define_and_train_model(all_sequences: list, all_sequence_labels: list, save:
         file_name = "graph_model.keras" if v2 else "gesture_recognition_model.keras"
         print("Model training complete.")
         save_model(model, filepath=file_name)
+
 
 
 def define_and_train_model_v2(all_sequences: list, all_sequence_labels: list, save: bool = False):

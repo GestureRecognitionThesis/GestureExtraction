@@ -148,7 +148,7 @@ def load_data_input_to_model(save: bool, sub_path: str = ''):
         labels.append(file_name)
         result = fit_data_to_sequence(data)
         sequences.append(result)
-    print(sequences)
+    #print(sequences)
     define_and_train_model(sequences, labels, save)
 
 
@@ -194,11 +194,11 @@ def load_and_use_model():
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
-    print(data)
     sequences: list = []
     labels: list = [file_name]
     result = fit_data_to_sequence(data)
     sequences.append(result)
+    print(sequences)
     padded_sequences, labels, max_length = prepare_sequences(sequences, labels)
     padded_sequences = np.array(padded_sequences)
     prediction = model.predict(padded_sequences)
@@ -208,13 +208,12 @@ def load_and_use_model():
     # Map predicted class indices to their corresponding labels
     predicted_labels = [class_labels[idx] for idx in predicted_labels]
     print("Predicted Labels:", predicted_labels)
-    print("Raw Prediction:", prediction)
 
 
 def load_and_use_new_model():
     model = load_model('graph_model.keras')
     # Predict
-    data_path = 'data/test/graphs/peace1.json'
+    data_path = 'data/test/graphs/thumb53.json'
     data: dict
     file_name: str
     data, file_name = load_json(data_path)
@@ -238,8 +237,9 @@ if __name__ == '__main__':
     print("nice")
     #extract_and_save_data(subpath="coordinates")
     #extract_and_save_data(subpath="graphs", v2=True)
-    #load_data_input_to_model(True, 'train/coordinates')
-    load_data_input_to_model_v2(True, 'train/graphs')
-    # load_and_use_model()
+    load_data_input_to_model(False, 'train/coordinates')
+    #load_data_input_to_model_last(False, 'test/coordinates')
+    #load_data_input_to_model_v2(True, 'train/graphs')
+    #load_and_use_model()
     #load_and_use_new_model()
     # load_single_video_and_predict()
