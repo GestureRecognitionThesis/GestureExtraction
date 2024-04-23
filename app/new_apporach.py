@@ -4,6 +4,8 @@ import os
 import numpy as np
 from keras import Sequential
 from keras.src.layers import LSTM, Dense
+from keras.src.saving.saving_api import save_model, load_model
+from keras.src.utils import pad_sequences
 
 
 def load_json_data(path: str) -> tuple[dict, str]:
@@ -15,6 +17,7 @@ def load_json_data(path: str) -> tuple[dict, str]:
     # remove all numbers from the text
     file_name = ''.join([i for i in file_name if not i.isdigit()])
     return data, file_name
+
 
 def transform_data_to_sequence(data: dict):
     sequences: list = []
@@ -30,21 +33,31 @@ def transform_data_to_sequence(data: dict):
         sequences.append(flattened_list)
     return sequences
 
-def load_data():
+
+def load_data(save: bool = False):
     files: list = os.listdir('./data/test/coordinates/')
     sequences: list = []
     labels: list = []
     for file in files:
         data_path = './data/test/coordinates/' + file
         data, file_name = load_json_data(data_path)
-        class_labels = {"can": 0, "peace": 1, "thumb": 2}
-        labels.append(0)
+        if "can" in file_name:
+            print("appened 0 for file name: " + file_name)
+            labels.append(0)
+        elif "peace" in file_name:
+            print("appened 1 for file name: " + file_name)
+            labels.append(1)
+        elif "thumb" in file_name:
+            print("appened 2 for file name: " + file_name)
+            labels.append(2)
+        else:
+            raise ValueError("Invalid label")
         result = transform_data_to_sequence(data)
         sequences.append(result)
     labels = np.array(labels)
     max_seq_length = max(len(seq) for seq in sequences)
-    padded_sequences = np.array(
-        [np.pad(seq, ((0, max_seq_length - len(seq)), (0, 0)), mode='constant') for seq in sequences])
+    print(f"Max sequence length: {max_seq_length}")
+    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post')
 
     model = Sequential([
         LSTM(128, input_shape=(max_seq_length, 63)),
@@ -57,5 +70,31 @@ def load_data():
     # Train the model
     model.fit(padded_sequences, labels, epochs=10, batch_size=1)
 
+    if save:
+        file_name = "new_approach_model.keras"
+        print("Model training complete.")
+        save_model(model, filepath=file_name)
+
+
+def custom_predict():
+    model = load_model('new_approach_model.keras')
+    data_path = "data/test/coordinates/can3.json"
+    data, file_name = load_json_data(data_path)
+    max_seq_length = 48
+    result = transform_data_to_sequence(data)
+    sequences = [result]
+    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post')
+    prediction = model.predict(padded_sequences)
+    predicted_labels = np.argmax(prediction, axis=1)
+    print(predicted_labels)
+
+
+def run(load: bool = False):
+    if load:
+        load_data(save=False)
+    else:
+        custom_predict()
+
+
 if __name__ == '__main__':
-    load_data()
+    run(load=True)
