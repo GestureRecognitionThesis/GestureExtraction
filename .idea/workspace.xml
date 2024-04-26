@@ -5,68 +5,791 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Works with new apporach, using sequences of length 63 (21 landmarks with 3 features each)">
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can10.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can13.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can14.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can15.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can16.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can18.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can19.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can20.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can21.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/can9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace10.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace13.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace14.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace15.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace16.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace17.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace18.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace19.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace20.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/peace9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb10.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb13.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb14.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb15.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb16.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb17.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb18.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb19.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb20.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/train/new/coordinates/thumb9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can51.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can52.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/peace9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/100/thumb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/25/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/peace9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/coordinates/50/thumb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can100.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can51.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can52.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can53.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can54.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can55.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can56.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can57.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can58.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can59.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can60.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can61.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can62.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can63.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can64.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can65.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can66.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can67.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can68.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can69.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can70.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can71.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can72.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can73.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can74.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can75.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can76.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can77.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can78.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can79.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can80.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can81.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can82.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can83.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can84.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can85.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can86.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can87.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can88.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can89.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can90.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can91.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can92.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can93.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can94.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can95.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can96.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can97.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can98.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/can99.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace100.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace51.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace52.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace53.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace54.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace55.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace56.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace57.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace58.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace59.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace60.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace61.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace62.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace63.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace64.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace65.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace66.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace67.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace68.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace69.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace70.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace71.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace72.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace73.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace74.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace75.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace76.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace77.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace78.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace79.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace80.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace81.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace82.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace83.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace84.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace85.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace86.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace87.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace88.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace89.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace90.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace91.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace92.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace93.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace94.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace95.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace96.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace97.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace98.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/peace99.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb100.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb51.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb52.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb53.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb54.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb55.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb56.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb57.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb58.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb59.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb60.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb61.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb62.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb63.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb64.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb65.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb66.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb67.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb68.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb69.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb70.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb71.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb72.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb73.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb74.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb75.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb76.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb77.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb78.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb79.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb80.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb81.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb82.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb83.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb84.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb85.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb86.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb87.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb88.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb89.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb90.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb91.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb92.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb93.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb94.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb95.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb96.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb97.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb98.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/100/thumb99.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/peace9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/25/thumb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/can9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/peace9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb17.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb19.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb23.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb24.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb26.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb29.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb31.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb32.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb33.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb34.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb35.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb38.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb39.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb40.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb41.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb42.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb43.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb44.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb45.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb46.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb47.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb48.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb50.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/final/graphs/50/thumb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dump.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/test/can1.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/can1.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/test/can105.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/can105.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/test/can106.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/can106.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/test/peace1.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/peace1.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/videos/test/thumb1.MOV" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/videos/thumb1.MOV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/new_apporach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/new_apporach.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +837,13 @@
     "Python.extract_frames.executor": "Run",
     "Python.main.executor": "Run",
     "Python.model_main.executor": "Run",
+    "Python.new_apporach.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/nich/Desktop/Master Thesis/GestureExtraction/app/data/train/new/coordinates",
+    "last_opened_file_path": "C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/app/data/final/graphs/25",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,23 +855,24 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/data/train/new/coordinates" />
-      <recent name="$PROJECT_DIR$/app/data/test/coordinates" />
-      <recent name="$PROJECT_DIR$/app/data/test/graphs" />
-      <recent name="'" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\25" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\50" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\100" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\coordinates\100" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\coordinates\50" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/data/test" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos\valid" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos\test" />
-      <recent name="$PROJECT_DIR$/app/data/test/coordinates" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\train\coordinates" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\coordinates\100" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\testing" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\coordinates\50" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\coordinates\25" />
     </key>
   </component>
   <component name="RunManager" selected="Python.new_apporach">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -170,6 +895,7 @@
     </configuration>
     <configuration name="extract_frames (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -192,6 +918,7 @@
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -214,6 +941,7 @@
     </configuration>
     <configuration name="model_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -236,6 +964,7 @@
     </configuration>
     <configuration name="new_apporach" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -258,6 +987,7 @@
     </configuration>
     <configuration name="test_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -560,13 +1290,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Works with new apporach, using sequences of length 63 (21 landmarks with 3 features each)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1713805896244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714141001283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1714146137791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1713874363909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
+    <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1712740005867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
   </component>
 </project>

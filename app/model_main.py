@@ -73,7 +73,7 @@ def extract_and_save_data(subpath: str = '', v2: bool = False, test: bool = Fals
             video_path = f'./data/videos/test/{file}'
         else:
             video_path = f'./data/videos/valid/{file}'
-        data_path = f'./data/train/{subpath}/'
+        data_path = f'./data/final/paddings/'
         progres_bar.update(1)
         progres_bar.set_description(f"Extracting frames from {file}")
         extracted_frames = extract(video_path)
@@ -235,9 +235,9 @@ def load_and_use_new_model():
 # FrameData) ] ]
 if __name__ == '__main__':
     print("nice")
-    #extract_and_save_data(subpath="coordinates")
+    extract_and_save_data(subpath="coordinates", test=True)
     #extract_and_save_data(subpath="graphs", v2=True)
-    load_data_input_to_model(False, 'train/coordinates')
+    #load_data_input_to_model(False, 'train/coordinates')
     #load_data_input_to_model_last(False, 'test/coordinates')
     #load_data_input_to_model_v2(True, 'train/graphs')
     #load_and_use_model()
