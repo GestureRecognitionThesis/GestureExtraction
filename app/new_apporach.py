@@ -39,7 +39,7 @@ def transform_data_to_sequence_graphs(data: dict):
     for frame_data in data.values():
         landmarks = []
         for landmark_value in frame_data.values():
-            float_value = extract_coefficients(landmark_value)
+            float_value = string_to_float32(landmark_value)
             landmarks.append(float_value)
         sequences.append(landmarks)
     return sequences
@@ -127,7 +127,23 @@ def load_graph_data(save: bool = False, amount: int = 25):
     labels = np.array(labels)
     max_seq_length = max(len(seq) for seq in sequences)
     print(f"Max sequence length: {max_seq_length}")
-    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post')
+    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+
+    model = Sequential([
+        LSTM(128, input_shape=(max_seq_length, 21)),
+        Dense(3, activation='softmax')  # 3 output classes: Fish, Cow, Moon
+    ])
+
+    # Compile the model
+    model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+    # Train the model
+    model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+
+    if save:
+        file_name = f"graphs_{amount}.keras"
+        print("Model training complete.")
+        save_model(model, filepath=file_name)
 
 
 def custom_predict_coordinates():

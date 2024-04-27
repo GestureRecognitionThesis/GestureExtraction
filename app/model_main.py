@@ -239,7 +239,7 @@ if __name__ == '__main__':
     #extract_and_save_data(subpath="graphs", v2=True)
     #load_data_input_to_model(False, 'train/coordinates')
     #load_data_input_to_model_last(False, 'test/coordinates')
-    #load_data_input_to_model_v2(True, 'train/graphs')
+    load_data_input_to_model_v2(True, 'train/graphs')
     #load_and_use_model()
     #load_and_use_new_model()
     # load_single_video_and_predict()
