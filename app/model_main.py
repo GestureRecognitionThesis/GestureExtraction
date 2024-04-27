@@ -15,7 +15,7 @@ def calculate_graphs(data: list):
     for i in range(len(data)):  # every frame
         for j in range(len(data[i])):  # every landmark
             if i == 0:
-                data[i][j].direct_graph = "firstFrame"
+                data[i][j].direct_graph = "0"
                 continue
             data[i][j].direct_graph = calculate_line_equation(data[i - 1][j], data[i][j])
 
@@ -31,19 +31,21 @@ def save_to_json(path: str, data: list, file_name: str, v2: bool = False):
 
         # Iterate over each FrameData object in the item
         for frame_data in item:
-            if frame_data.direct_graph == "firstFrame" and v2:
-                continue
+            graph = frame_data.direct_graph
+            if frame_data.direct_graph == "firstFrame":
+                graph = 0
             landmark = "Landmark" + str(frame_data.landmark + 1)
             if v2:
                 frame_data_by_landmark[landmark] = frame_data.direct_graph
             else:
                 if landmark not in frame_data_by_landmark:
                     frame_data_by_landmark[landmark] = []
-
+                graph = frame_data.direct_graph
                 frame_data_list = [
                     frame_data.relative[0],
                     frame_data.relative[1],
                     frame_data.relative[2],
+                    graph
                 ]
                 frame_data_by_landmark[landmark].append(frame_data_list)
 
@@ -87,7 +89,7 @@ def extract_and_save_data(subpath: str = '', v2: bool = False, test: bool = Fals
             progres_bar.set_description(f"Calculating graphs for file {file}")
             calculate_graphs(all_data)
         progres_bar.set_description(f"Saving to {file} to json")
-        save_to_json(data_path, all_data, str(file).split(".")[0], v2)
+        save_to_json(data_path, all_data, str(file).split(".")[0])
     progres_bar.close()
     """
     video_path = '../data/videos/can1.MOV'
@@ -235,11 +237,11 @@ def load_and_use_new_model():
 # FrameData) ] ]
 if __name__ == '__main__':
     print("nice")
-    extract_and_save_data(subpath="coordinates", test=True)
-    #extract_and_save_data(subpath="graphs", v2=True)
+    #extract_and_save_data(subpath="coordinates", test=True)
+    extract_and_save_data(subpath="graphs", v2=True, test=True)
     #load_data_input_to_model(False, 'train/coordinates')
     #load_data_input_to_model_last(False, 'test/coordinates')
-    load_data_input_to_model_v2(True, 'train/graphs')
+    #load_data_input_to_model_v2(True, 'train/graphs')
     #load_and_use_model()
     #load_and_use_new_model()
     # load_single_video_and_predict()

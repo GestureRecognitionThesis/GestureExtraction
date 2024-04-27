@@ -45,25 +45,19 @@ def transform_data_to_sequence_graphs(data: dict):
     return sequences
 
 
-def extract_coefficients(expression: str) -> float:
-    # Split the expression by 'x' and '+' to extract coefficients
-    parts = expression.split('x')
-
-    # Extract and process 'a' coefficient
-    a_str = parts[0].strip().replace(".", "").replace("-", "") if parts[
-        0].strip() else "0"  # coefficient of x without decimal and minus
-
-    # Extract and process 'b' constant term
-    b_str = "0"
-    if len(parts) > 1:
-        constant_part = parts[1].strip()
-        if '+' in constant_part:
-            b_str = constant_part.split('+')[1].strip().replace("-", "")
-        elif "-" in constant_part:
-            b_str = "-" + constant_part.split('-')[1].strip()
-
-    combined_str = a_str + b_str  # Concatenate 'a' and 'b' strings
-    return float(combined_str)  # Convert concatenated string to float
+def transform_data_to_sequence_combine(data: dict):
+    sequences = []
+    for frame_data in data.values():
+        landmarks = []
+        for landmark_value in frame_data.values():
+            landmark_value[0][3] = string_to_float32(landmark_value[0][3]) if landmark_value[0][3] != '0' else 0
+            if len(landmarks) == 0:
+                landmarks = landmark_value[:4]
+            else:
+                landmarks.extend(landmark_value[:4])
+        flattened_list = [item for sublist in landmarks for item in sublist]
+        sequences.append(flattened_list)
+    return sequences
 
 
 def load_coordinate_data(save: bool = False, amount: int = 25):
@@ -146,6 +140,46 @@ def load_graph_data(save: bool = False, amount: int = 25):
         save_model(model, filepath=file_name)
 
 
+def load_combined_data(save: bool = False, amount: int = 25):
+    files: list = os.listdir(f'./data/final/testing/')  # change after testing
+    print(f"Amount of files: {len(files)}")
+    sequences: list = []
+    labels: list = []
+    for file in files:
+        data_path = f'./data/final/testing/{file}'
+        data, file_name = load_json_data(data_path)
+        if "can" in file_name:
+            labels.append(0)
+        elif "peace" in file_name:
+            labels.append(1)
+        elif "thumb" in file_name:
+            labels.append(2)
+        else:
+            raise ValueError("Invalid label")
+        result = transform_data_to_sequence_combine(data)
+        sequences.append(result)
+    labels = np.array(labels)
+    max_seq_length = max(len(seq) for seq in sequences)
+    print(f"Max sequence length: {max_seq_length}")
+    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+
+    model = Sequential([
+        LSTM(128, input_shape=(max_seq_length, 84)),
+        Dense(3, activation='softmax')  # 3 output classes: Fish, Cow, Moon
+    ])
+
+    # Compile the model
+    model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+    # Train the model
+    model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+
+    if save:
+        file_name = f"graphs_{amount}.keras"
+        print("Model training complete.")
+        save_model(model, filepath=file_name)
+
+
 def custom_predict_coordinates():
     model = load_model('new_approach_model.keras')
     data_path = "data/test/coordinates/can3.json"
@@ -170,9 +204,11 @@ def run(arg: str = ''):
             load_coordinate_data(save=saving, amount=amount)
         elif 'graphs' in arg:
             load_graph_data(save=saving, amount=amount)
+        elif 'combined' in arg:
+            load_combined_data(save=saving, amount=amount)
     else:
         custom_predict_coordinates()
 
 
 if __name__ == '__main__':
-    run(arg="25 load graphs")
+    run(arg="25 load combined")
