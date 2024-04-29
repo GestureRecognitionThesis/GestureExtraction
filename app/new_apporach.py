@@ -1,12 +1,13 @@
 import json
 import os
-import re
 
 import numpy as np
 from keras import Sequential
 from keras.src.layers import LSTM, Dense
 from keras.src.saving.saving_api import save_model, load_model
 from keras.src.utils import pad_sequences
+from sklearn.metrics import f1_score
+
 from utils import string_to_float32
 
 
@@ -92,7 +93,14 @@ def load_coordinate_data(save: bool = False, amount: int = 25):
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
     # Train the model
-    model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    loss = history.history['loss']
+    accuracy = history.history['accuracy']
+    print(f"Final Loss: {loss[-1]}, Final Accuracy: {accuracy[-1]}")
+    predictions = model.predict(padded_sequences)
+    predicted_labels = np.argmax(predictions, axis=1)
+    f1 = f1_score(labels, predicted_labels, average='weighted')
+    print(f"F1 Score: {f1}")
 
     if save:
         file_name = f"coordinates_{amount}.keras"
@@ -132,7 +140,10 @@ def load_graph_data(save: bool = False, amount: int = 25):
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
     # Train the model
-    model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    loss = history.history['loss']
+    accuracy = history.history['accuracy']
+    print(f"Final Loss: {loss[-1]}, Final Accuracy: {accuracy[-1]}")
 
     if save:
         file_name = f"graphs_{amount}.keras"
@@ -141,12 +152,12 @@ def load_graph_data(save: bool = False, amount: int = 25):
 
 
 def load_combined_data(save: bool = False, amount: int = 25):
-    files: list = os.listdir(f'./data/final/testing/')  # change after testing
+    files: list = os.listdir(f'./data/final/combined/{amount}')  # change after testing
     print(f"Amount of files: {len(files)}")
     sequences: list = []
     labels: list = []
     for file in files:
-        data_path = f'./data/final/testing/{file}'
+        data_path = f'./data/final/combined/{amount}/{file}'
         data, file_name = load_json_data(data_path)
         if "can" in file_name:
             labels.append(0)
@@ -172,10 +183,13 @@ def load_combined_data(save: bool = False, amount: int = 25):
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
     # Train the model
-    model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    loss = history.history['loss']
+    accuracy = history.history['accuracy']
+    print(f"Final Loss: {loss[-1]}, Final Accuracy: {accuracy[-1]}")
 
     if save:
-        file_name = f"graphs_{amount}.keras"
+        file_name = f"combined_{amount}.keras"
         print("Model training complete.")
         save_model(model, filepath=file_name)
 
@@ -193,10 +207,54 @@ def custom_predict_coordinates():
     print(predicted_labels)
 
 
+def test_model_prediction(prefix: str = '', suffix: str = ''):
+    model_path = f"{prefix}_{suffix}.keras"
+    model = load_model(model_path)
+    random_number = np.random.randint(1, int(suffix))
+    print(f"Random number: {random_number}")
+    data_path_list = [
+        f"data/final/{prefix}/{suffix}/can{random_number}.json",
+        f"data/final/{prefix}/{suffix}/peace{random_number}.json",
+        f"data/final/{prefix}/{suffix}/thumb{random_number}.json"
+    ]
+    for path in data_path_list:
+        data, file_name = load_json_data(path)
+        result = None
+        if 'coordinates' in prefix:
+            result = transform_data_to_sequence_coordinates(data)
+        elif 'graphs' in prefix:
+            result = transform_data_to_sequence_graphs(data)
+        elif 'combined' in prefix:
+            result = transform_data_to_sequence_combine(data)
+        if result is None:
+            raise ValueError("Invalid prefix")
+        sequences = [result]
+        max_seq_length = sequence_lengths[f"{prefix}{suffix}"]
+        padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+        prediction = model.predict(padded_sequences)
+        predicted_labels = np.argmax(prediction, axis=1)
+        class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
+        print("raw prediction: ", predicted_labels)
+        print(f"Predicted label: {class_labels[predicted_labels[0]]}")
+
+
+sequence_lengths: dict = {
+    'coordinates25': 48,
+    'graphs25': 47,
+    'combined25': 48,
+    'coordinates50': 48,
+    'graphs50': 47,
+    'combined50': 48,
+    'coordinates100': 51,
+    'graphs100': 50,
+    'combined100': 51,
+}
+
+
 def run(arg: str = ''):
     if arg == '':
         raise ValueError("Invalid argument")
-
+    print(f"Running with argument: {arg}")
     amount = int(arg.split()[0])
     saving = True if 'save' in arg else False
     if 'load' in arg:
@@ -206,9 +264,10 @@ def run(arg: str = ''):
             load_graph_data(save=saving, amount=amount)
         elif 'combined' in arg:
             load_combined_data(save=saving, amount=amount)
-    else:
-        custom_predict_coordinates()
+    elif 'predict' in arg:
+        prefix = 'coordinates' if 'coordinates' in arg else 'graphs' if 'graphs' in arg else 'combined'
+        test_model_prediction(prefix, str(amount))
 
 
 if __name__ == '__main__':
-    run(arg="25 load combined")
+    run(arg="25 load coordinates")
