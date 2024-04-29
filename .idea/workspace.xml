@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="model ready for experimentation">
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Added precision and recall">
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/combined_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/combined_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/combined_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/coordinates_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/coordinates_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/coordinates_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/graphs_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/graphs_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/presentation/models/graphs_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/training/final_approach.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/combined_25.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/combined_25.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/coordinates_25.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/coordinates_25.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphs_25.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphs_25.keras" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/new_apporach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/new_apporach.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/presentation/use_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/presentation/use_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/training/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load_testing/test_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_testing/test_requests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,45 +64,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.extract_frames.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.new_apporach.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/app/data/final/combined/100&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__main__.executor": "Run",
+    "Python.extract_frames.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.model_main.executor": "Run",
+    "Python.new_apporach.executor": "Run",
+    "Python.test_requests.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/app/presentation/models",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\models" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\100" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\50" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\25" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\50" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\100" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\models" />
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\100" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\testing" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\50" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\25" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\videos\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.new_apporach">
+  <component name="RunManager" selected="Python.__main__">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="ENV_FILES" value="" />
@@ -226,10 +244,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.new_apporach" />
-        <item itemvalue="Python.model_main" />
         <item itemvalue="Python.__main__" />
         <item itemvalue="Python.test_requests" />
+        <item itemvalue="Python.new_apporach" />
+        <item itemvalue="Python.model_main" />
         <item itemvalue="Python.extract_frames (1)" />
       </list>
     </recent_temporary>
@@ -261,7 +279,7 @@
       <workItem from="1713188983224" duration="71000" />
       <workItem from="1713448478409" duration="2858000" />
       <workItem from="1714219440703" duration="7268000" />
-      <workItem from="1714377854364" duration="4199000" />
+      <workItem from="1714377854364" duration="8107000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -495,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714385051995</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added precision and recall">
+      <option name="closed" value="true" />
+      <created>1714385140389</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385140389</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +539,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Frames extracted as nparray can be used for processing now" />
     <MESSAGE value="File cleanup" />
     <MESSAGE value="Processed data gets saves to list" />
     <MESSAGE value="Given two points, a line equation can now be calculated" />
@@ -538,16 +563,18 @@
     <MESSAGE value="Graphs and coords done, now to combined" />
     <MESSAGE value="All three types of data ready" />
     <MESSAGE value="model ready for experimentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="model ready for experimentation" />
+    <MESSAGE value="Added precision and recall" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added precision and recall" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1714385003990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1714419972218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1712740005867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1714420511387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$test_requests.coverage" NAME="test_requests Coverage Results" MODIFIED="1714420503096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
   </component>
 </project>

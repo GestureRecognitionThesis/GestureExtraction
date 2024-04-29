@@ -2,7 +2,10 @@ import tempfile
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
 from keras.models import load_model
-from training import extract, process_mp, fit_data_to_sequence, prepare_sequences_without_labels
+from keras.src.utils import pad_sequences
+
+from training import (extract, process_mp, fit_data_to_sequence, prepare_sequences_without_labels,
+                      transform_data_to_sequence_coordinates, sequence_lengths)
 import numpy as np
 
 model_router = APIRouter(prefix="/model")
@@ -10,7 +13,7 @@ model_router = APIRouter(prefix="/model")
 
 def load_and_use_model():
     print("Loading model")
-    return load_model('gesture_recognition_model.keras')
+    return load_model('coordinates_25.keras')
 
 
 model = load_and_use_model()
@@ -34,6 +37,26 @@ async def upload_video(video_file: UploadFile = File(...)):
         return JSONResponse(content={"status": "File uploaded successfully"}, status_code=200)
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
+
+
+@model_router.post("/predict_coordinates")
+async def predict_coordinates(video_file: UploadFile = File(...)):
+    video_data = await video_file.read()
+    temp_video_file_path = create_temp_file_return_path(video_data)
+    frames = extract(temp_video_file_path)
+    all_data: list = []
+    for frame in frames:
+        all_data.append(process_mp(frame))
+    # Convert the data to a dictionary
+    data_dict = convert_list_data_to_dict(all_data)
+    result = transform_data_to_sequence_coordinates(data_dict)
+    sequences: list = [result]
+    max_seq_length = sequence_lengths["coordinates25"]
+    padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post')
+    prediction = model.predict(padded_sequences)
+    predicted_labels = np.argmax(prediction, axis=1)
+    class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
+    return JSONResponse(content={"prediction": class_labels[predicted_labels[0]]}, status_code=200)
 
 
 @model_router.post("/predict")
