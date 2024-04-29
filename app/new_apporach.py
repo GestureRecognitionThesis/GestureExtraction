@@ -6,7 +6,7 @@ from keras import Sequential
 from keras.src.layers import LSTM, Dense
 from keras.src.saving.saving_api import save_model, load_model
 from keras.src.utils import pad_sequences
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, precision_score, recall_score
 
 from utils import string_to_float32
 
@@ -100,7 +100,11 @@ def load_coordinate_data(save: bool = False, amount: int = 25):
     predictions = model.predict(padded_sequences)
     predicted_labels = np.argmax(predictions, axis=1)
     f1 = f1_score(labels, predicted_labels, average='weighted')
+    precision = precision_score(labels, predicted_labels, average='weighted')
+    recall = recall_score(labels, predicted_labels, average='weighted')
     print(f"F1 Score: {f1}")
+    print(f"Precision: {precision}")
+    print(f"Recall: {recall}")
 
     if save:
         file_name = f"coordinates_{amount}.keras"
