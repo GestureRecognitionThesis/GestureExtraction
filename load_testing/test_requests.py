@@ -1,8 +1,8 @@
 import requests
 
 
-def test_upload_video():
-    url = "http://localhost:8000/model/predict_coordinates"  # Adjust the URL to match your endpoint
+def test_upload_video(subpath: str = ''):
+    url = f"http://localhost:8000/model/predict_{subpath}"  # Adjust the URL to match your endpoint
     files = {'video_file': ('uploaded_video.mov', open('../app/data/videos/valid/can20.MOV', 'rb'), 'video/quicktime')}
     headers = {}  # No need to explicitly set Content-Type
 
@@ -19,4 +19,4 @@ def test_upload_video():
 
 
 if __name__ == "__main__":
-    test_upload_video()
+    test_upload_video("combined")
