@@ -1,21 +1,25 @@
+import os
 import tempfile
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
 from keras.models import load_model
 from keras.src.utils import pad_sequences
 
-from model_main import calculate_graphs
-from training import (extract, process_mp, fit_data_to_sequence, prepare_sequences_without_labels,
-                      transform_data_to_sequence_coordinates, sequence_lengths, transform_data_to_sequence_graphs,
-                      transform_data_to_sequence_combine)
+from app.training import (extract, process_mp, fit_data_to_sequence, prepare_sequences_without_labels,
+                          transform_data_to_sequence_coordinates, sequence_lengths, transform_data_to_sequence_graphs,
+                          transform_data_to_sequence_combine, calculate_graphs)
 import numpy as np
 
 model_router = APIRouter(prefix="/model")
 
 
 def load_and_use_model(model_name: str):
-    print(f"Loading model: {model_name}...")
-    return load_model(f'{model_name}.keras')
+    base_path = os.path.dirname(__file__)  # gets the directory of the current script
+    model_path = os.path.join(base_path, f'{model_name}.keras')
+    print(f"Attempting to load model from: {model_path}")
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model file not found at {model_path}")
+    return load_model(model_path)
 
 
 gesture_model = load_and_use_model("coordinates_25")

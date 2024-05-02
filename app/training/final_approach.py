@@ -8,7 +8,7 @@ from keras.src.saving.saving_api import save_model, load_model
 from keras.src.utils import pad_sequences
 from sklearn.metrics import f1_score, precision_score, recall_score
 
-from utils import string_to_float32
+from .utils import string_to_float32
 
 
 def load_json_data(path: str) -> tuple[dict, str]:

@@ -21,4 +21,4 @@ def run(arg: str = ''):
 
 
 if __name__ == '__main__':
-    run(arg="25 predict coordinates")
+    run(arg="100 predict coordinates")

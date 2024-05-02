@@ -22,3 +22,12 @@ def calculate_line_equation(point1: FrameData, point2: FrameData) -> str:
     result: str = f"{slope}x + {y_intercept}"
 
     return result
+
+
+def calculate_graphs(data: list):
+    for i in range(len(data)):  # every frame
+        for j in range(len(data[i])):  # every landmark
+            if i == 0:
+                data[i][j].direct_graph = "0"
+                continue
+            data[i][j].direct_graph = calculate_line_equation(data[i - 1][j], data[i][j])

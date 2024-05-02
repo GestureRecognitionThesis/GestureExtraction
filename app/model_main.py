@@ -11,14 +11,6 @@ from tqdm import tqdm
 # all_data[0][0] is the first landmark
 # the length of all_data[0] is equal to the total amount of landmarks processed in the frame
 
-def calculate_graphs(data: list):
-    for i in range(len(data)):  # every frame
-        for j in range(len(data[i])):  # every landmark
-            if i == 0:
-                data[i][j].direct_graph = "0"
-                continue
-            data[i][j].direct_graph = calculate_line_equation(data[i - 1][j], data[i][j])
-
 
 def save_to_json(path: str, data: list, file_name: str, v2: bool = False):
     # Initialize an empty dictionary to store the JSON data

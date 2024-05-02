@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
-from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-from presentation import status_router, model_router
+from app.presentation import status_router, model_router
 
 fastApi = FastAPI()
 fastApi.include_router(status_router)
