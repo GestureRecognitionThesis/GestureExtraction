@@ -5,7 +5,7 @@ from training import load_coordinate_data, load_graph_data, load_combined_data, 
     test_data_prediction
 from dotenv import load_dotenv
 
-load_dotenv()
+
 
 
 def run(arg: str = '', cb=None):
@@ -25,6 +25,8 @@ def run(arg: str = '', cb=None):
     elif 'predict' in arg:
         prefix = 'coordinates' if 'coordinates' in arg else 'graphs' if 'graphs' in arg else 'combined'
         test_model_prediction(prefix, str(amount), cb)
+    elif "time_metrics" in arg:
+        extract_time_metrics()
 
 
 def run_with_test_data():
@@ -33,7 +35,16 @@ def run_with_test_data():
         print(r)
 
 
-if __name__ == '__main__':
+def extract_model_metrics():
+    suffixes = ['25', '50', '100']
+    models = ["coordinates", "graphs", "combined"]
+    for m in models:
+        for s in suffixes:
+            arg = f'{s} load {m} metrics'
+            run(arg)
+
+
+def extract_time_metrics():
     suffixes = ['25', '50', '100']
     models = ["coordinates", "graphs", "combined"]
     for m in models:
@@ -47,3 +58,7 @@ if __name__ == '__main__':
                     writer = csv.writer(file)
                     writer.writerow(c)
 
+
+if __name__ == '__main__':
+    load_dotenv()
+    extract_model_metrics()

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="swarm added for scalability testing">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/test_train_metrics.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/time_metrics.csv" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="experiments">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/coordinates_100.keras" beforeDir="false" afterPath="$PROJECT_DIR$/app/coordinates_100.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_metrics.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/new_apporach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/new_apporach.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/training/final_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/final_approach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +275,7 @@
       <workItem from="1715004177692" duration="2548000" />
       <workItem from="1715685558688" duration="159000" />
       <workItem from="1715685725692" duration="2090000" />
-      <workItem from="1715689267151" duration="5538000" />
+      <workItem from="1715689267151" duration="7897000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -544,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714659565822</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="experiments">
+      <option name="closed" value="true" />
+      <created>1715715241394</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1715715241394</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +570,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Can now save data to json file" />
     <MESSAGE value="Model configuration finished, just need to train on several videos" />
     <MESSAGE value="Added load from folders, tested another sequences" />
     <MESSAGE value="Workspace cleanup" />
@@ -590,11 +594,12 @@
     <MESSAGE value="Trained models, adjusted structure, and configured 1/9 of the API" />
     <MESSAGE value="Rest of endpoint works now" />
     <MESSAGE value="swarm added for scalability testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="swarm added for scalability testing" />
+    <MESSAGE value="experiments" />
+    <option name="LAST_COMMIT_MESSAGE" value="experiments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715714960431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715717445510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

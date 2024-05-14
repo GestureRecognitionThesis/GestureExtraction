@@ -63,8 +63,9 @@ def transform_data_to_sequence_combine(data: dict):
 
 
 def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
-    env_save = bool(os.getenv("model_metrics"))
-    env_time = bool(os.getenv("time_metrics"))
+    env_save = True if os.getenv("model_metrics") == "True" else False
+    env_time = True if os.getenv("time_metrics") == "True" else False
+    print(env_save, env_time)
     time = None
     if env_time:
         time = perf_counter()
@@ -149,8 +150,8 @@ def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = F
 
 
 def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
-    env_save = bool(os.getenv("model_metrics"))
-    env_time = bool(os.getenv("time_metrics"))
+    env_save = True if os.getenv("model_metrics") == "True" else False
+    env_time = True if os.getenv("time_metrics") == "True" else False
     time = None
     if env_time:
         time = perf_counter()
@@ -239,8 +240,8 @@ def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False,
 
 
 def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
-    env_save = bool(os.getenv("model_metrics"))
-    env_time = bool(os.getenv("time_metrics"))
+    env_save = True if os.getenv("model_metrics") == "True" else False
+    env_time = True if os.getenv("time_metrics") == "True" else False
     time = None
     if env_time:
         time = perf_counter()
