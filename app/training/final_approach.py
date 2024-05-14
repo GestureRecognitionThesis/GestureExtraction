@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 
@@ -7,7 +8,7 @@ from keras.src.layers import LSTM, Dense
 from keras.src.saving.saving_api import save_model, load_model
 from keras.src.utils import pad_sequences
 from sklearn.metrics import f1_score, precision_score, recall_score
-
+from time import perf_counter
 from .utils import string_to_float32
 
 
@@ -61,14 +62,25 @@ def transform_data_to_sequence_combine(data: dict):
     return sequences
 
 
-def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = False):
+def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
+    env_save = bool(os.getenv("model_metrics"))
+    env_time = bool(os.getenv("time_metrics"))
+    time = None
+    if env_time:
+        time = perf_counter()
     files: list = os.listdir(f'./data/final/coordinates/{amount}/')
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "os.listdir", perf_counter() - time])
+        time = perf_counter()
     print(f"Amount of files: {len(files)}")
     sequences: list = []
     labels: list = []
     for file in files:
         data_path = f'./data/final/coordinates/{amount}/{file}'
         data, file_name = load_json_data(data_path)
+        if env_time:
+            callback.append([str(amount), "coordinates", "load_coordinate_data", "load_json_data", perf_counter() - time])
+            time = perf_counter()
         if "can" in file_name:
             labels.append(0)
         elif "peace" in file_name:
@@ -78,22 +90,43 @@ def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = F
         else:
             raise ValueError("Invalid label")
         result = transform_data_to_sequence_coordinates(data)
+        if env_time:
+            callback.append([str(amount), "coordinates", "load_coordinate_data", "transform_data_to_sequence_coordinates", perf_counter() - time])
+            time = perf_counter()
         sequences.append(result)
     labels = np.array(labels)
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "np.array(labels)", perf_counter() - time])
+        time = perf_counter()
     max_seq_length = max(len(seq) for seq in sequences)
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "max_seq_length", perf_counter() - time])
+        time = perf_counter()
     print(f"Max sequence length: {max_seq_length}")
     padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post')
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "pad_sequences", perf_counter() - time])
+        time = perf_counter()
 
     model = Sequential([
         LSTM(128, input_shape=(max_seq_length, 63)),
         Dense(3, activation='softmax')  # 3 output classes: Fish, Cow, Moon
     ])
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "model=Sequential", perf_counter() - time])
+        time = perf_counter()
 
     # Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "model.compile", perf_counter() - time])
+        time = perf_counter()
 
     # Train the model
     history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    if env_time:
+        callback.append([str(amount), "coordinates", "load_coordinate_data", "model.fit", perf_counter() - time])
+        time = perf_counter()
     if metrics:
         loss = history.history['loss']
         accuracy = history.history['accuracy']
@@ -103,9 +136,11 @@ def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = F
         f1 = f1_score(labels, predicted_labels, average='weighted')
         precision = precision_score(labels, predicted_labels, average='weighted')
         recall = recall_score(labels, predicted_labels, average='weighted')
-        print(f"F1 Score: {f1}")
-        print(f"Precision: {precision}")
-        print(f"Recall: {recall}")
+        if env_save:
+            print("Saving model metrics")
+            with open("model_metrics.csv", "a", newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([f"coordinates{amount}", loss[-1], accuracy[-1], f1, precision, recall])
 
     if save:
         file_name = f"coordinates_{amount}.keras"
@@ -113,14 +148,25 @@ def load_coordinate_data(save: bool = False, amount: int = 25, metrics: bool = F
         save_model(model, filepath=file_name)
 
 
-def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False):
+def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
+    env_save = bool(os.getenv("model_metrics"))
+    env_time = bool(os.getenv("time_metrics"))
+    time = None
+    if env_time:
+        time = perf_counter()
     files: list = os.listdir(f'./data/final/graphs/{amount}/')
+    if env_time:
+        callback.append([str(amount), "graphs", "load_graph_data", "os.listdir", perf_counter() - time])
+        time = perf_counter()
     print(f"Amount of files: {len(files)}")
     sequences: list = []
     labels: list = []
     for file in files:
         data_path = f'./data/final/graphs/{amount}/{file}'
         data, file_name = load_json_data(data_path)
+        if env_time:
+            callback.append([str(amount), "graphs", "load_graph_data", "load_json_data", perf_counter() - time])
+            time = perf_counter()
         if "can" in file_name:
             labels.append(0)
         elif "peace" in file_name:
@@ -130,34 +176,61 @@ def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False)
         else:
             raise ValueError("Invalid label")
         result = transform_data_to_sequence_graphs(data)
+        if env_time:
+            callback.append([str(amount), "graphs", "load_graph_data", "transform_data_to_sequence_graphs", perf_counter() - time])
+            time = perf_counter()
         sequences.append(result)
     labels = np.array(labels)
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "np.array(labels)", perf_counter() - time])
+        time = perf_counter()
     max_seq_length = max(len(seq) for seq in sequences)
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "max_seq_length", perf_counter() - time])
+        time = perf_counter()
     print(f"Max sequence length: {max_seq_length}")
     padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "pad_sequences", perf_counter() - time])
+        time = perf_counter()
 
     model = Sequential([
         LSTM(128, input_shape=(max_seq_length, 21)),
         Dense(3, activation='softmax')  # 3 output classes: Fish, Cow, Moon
     ])
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "model=Sequential", perf_counter() - time])
+        time = perf_counter()
 
     # Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "model.compile", perf_counter() - time])
+        time = perf_counter()
 
     # Train the model
     history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    if env_time:
+        callback.append(
+            [str(amount), "graphs", "load_graph_data", "model.fit", perf_counter() - time])
     if metrics:
         loss = history.history['loss']
         accuracy = history.history['accuracy']
-        print(f"Final Loss: {loss[-1]}, Final Accuracy: {accuracy[-1]}")
         predictions = model.predict(padded_sequences)
         predicted_labels = np.argmax(predictions, axis=1)
         f1 = f1_score(labels, predicted_labels, average='weighted')
         precision = precision_score(labels, predicted_labels, average='weighted')
         recall = recall_score(labels, predicted_labels, average='weighted')
-        print(f"F1 Score: {f1}")
-        print(f"Precision: {precision}")
-        print(f"Recall: {recall}")
+        if env_save:
+            print("Saving model metrics")
+            with open("model_metrics.csv", "a", newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([f"coordinates{amount}", loss[-1], accuracy[-1], f1, precision, recall])
 
     if save:
         file_name = f"graphs_{amount}.keras"
@@ -165,14 +238,25 @@ def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False)
         save_model(model, filepath=file_name)
 
 
-def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = False):
+def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = False, callback: list = None):
+    env_save = bool(os.getenv("model_metrics"))
+    env_time = bool(os.getenv("time_metrics"))
+    time = None
+    if env_time:
+        time = perf_counter()
     files: list = os.listdir(f'./data/final/combined/{amount}')  # change after testing
+    if env_time:
+        callback.append([str(amount), "combined", "load_combined_data", "os.listdir", perf_counter() - time])
+        time = perf_counter()
     print(f"Amount of files: {len(files)}")
     sequences: list = []
     labels: list = []
     for file in files:
         data_path = f'./data/final/combined/{amount}/{file}'
         data, file_name = load_json_data(data_path)
+        if env_time:
+            callback.append([str(amount), "combined", "load_combined_data", "load_json_data", perf_counter() - time])
+            time = perf_counter()
         if "can" in file_name:
             labels.append(0)
         elif "peace" in file_name:
@@ -182,22 +266,49 @@ def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = Fal
         else:
             raise ValueError("Invalid label")
         result = transform_data_to_sequence_combine(data)
+        if env_time:
+            callback.append([str(amount), "combined", "load_combined_data", "transform_data_to_sequence_combine", perf_counter() - time])
+            time = perf_counter()
         sequences.append(result)
     labels = np.array(labels)
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "np.array(labels)", perf_counter() - time])
+        time = perf_counter()
     max_seq_length = max(len(seq) for seq in sequences)
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "max_seq_length", perf_counter() - time])
+        time = perf_counter()
     print(f"Max sequence length: {max_seq_length}")
     padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "pad_sequences", perf_counter() - time])
+        time = perf_counter()
 
     model = Sequential([
         LSTM(128, input_shape=(max_seq_length, 84)),
         Dense(3, activation='softmax')  # 3 output classes: Fish, Cow, Moon
     ])
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "model=Sequential", perf_counter() - time])
+        time = perf_counter()
 
     # Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "model.compile", perf_counter() - time])
+        time = perf_counter()
 
     # Train the model
     history = model.fit(padded_sequences, labels, epochs=10, batch_size=1)
+    if env_time:
+        callback.append(
+            [str(amount), "combined", "load_combined_data", "model.fit", perf_counter() - time])
+        time = perf_counter()
     if metrics:
         loss = history.history['loss']
         accuracy = history.history['accuracy']
@@ -207,9 +318,11 @@ def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = Fal
         f1 = f1_score(labels, predicted_labels, average='weighted')
         precision = precision_score(labels, predicted_labels, average='weighted')
         recall = recall_score(labels, predicted_labels, average='weighted')
-        print(f"F1 Score: {f1}")
-        print(f"Precision: {precision}")
-        print(f"Recall: {recall}")
+        if env_save:
+            print("Saving model metrics")
+            with open("model_metrics.csv", "a", newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([f"coordinates{amount}", loss[-1], accuracy[-1], f1, precision, recall])
 
     if save:
         file_name = f"combined_{amount}.keras"
@@ -230,7 +343,8 @@ def custom_predict_coordinates():
     print(predicted_labels)
 
 
-def test_model_prediction(prefix: str = '', suffix: str = ''):
+def test_model_prediction(prefix: str = '', suffix: str = '', callback: list = None):
+    callback.append("test_model_prediction")
     model_path = f"{prefix}_{suffix}.keras"
     model = load_model(model_path)
     random_number = np.random.randint(1, int(suffix))
@@ -259,6 +373,40 @@ def test_model_prediction(prefix: str = '', suffix: str = ''):
         class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
         print("raw prediction: ", predicted_labels)
         print(f"Predicted label: {class_labels[predicted_labels[0]]}")
+        return file_name, class_labels[predicted_labels[0]]
+
+
+def test_data_prediction():
+    path_prefix = f'./data/final/testing/'
+    suffixes = ['25', '50', '100']
+    models = ["coordinates", "graphs", "combined"]
+    results = []
+    for model in models:
+        for suffix in suffixes:
+            model_path = f"{model}_{suffix}.keras"
+            model = load_model(model_path)
+            files: list = os.listdir(path_prefix)
+            for file in files:
+                data_path = f'{path_prefix}{file}'
+                data, file_name = load_json_data(data_path)
+                result = None
+                if 'coordinates' in model:
+                    result = transform_data_to_sequence_coordinates(data)
+                elif 'graphs' in model:
+                    result = transform_data_to_sequence_graphs(data)
+                elif 'combined' in model:
+                    result = transform_data_to_sequence_combine(data)
+                if result is None:
+                    raise ValueError("Invalid prefix")
+                sequences = [result]
+                max_seq_length = sequence_lengths[f"{model}{suffix}"]
+                padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
+                prediction = model.predict(padded_sequences)
+                predicted_labels = np.argmax(prediction, axis=1)
+                class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
+                results.append(
+                    [file_name, class_labels[predicted_labels[0]], file_name == class_labels[predicted_labels[0]]])
+    return results
 
 
 sequence_lengths: dict = {
