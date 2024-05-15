@@ -1,0 +1,4 @@
+Method,Name,Error,Occurrences
+POST,/model/predict_coordinates,RemoteDisconnected('Remote end closed connection without response'),2
+POST,/model/predict_coordinates,HTTPError('500 Server Error: Internal Server Error for url: /model/predict_coordinates'),2
+POST,/model/predict_coordinates,"ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)",7452

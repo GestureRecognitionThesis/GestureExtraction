@@ -1,0 +1,2 @@
+Method,Name,Error,Occurrences
+POST,/model/predict_coordinates,HTTPError('500 Server Error: Internal Server Error for url: /model/predict_coordinates'),8
