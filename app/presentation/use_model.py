@@ -51,7 +51,7 @@ async def predict_coordinates(video_file: UploadFile = File(...)):
     for frame in frames:
         all_data.append(process_mp(frame))
     # Convert the data to a dictionary
-    data_dict = convert_list_data_to_dict(all_data)
+    data_dict = convert_list_data_to_dict_cords(all_data)
     result = transform_data_to_sequence_coordinates(data_dict)
     sequences: list = [result]
     max_seq_length = sequence_lengths["coordinates25"]
@@ -63,7 +63,7 @@ async def predict_coordinates(video_file: UploadFile = File(...)):
 
 
 @model_router.post("/predict_graphs")
-async def predict_coordinates(video_file: UploadFile = File(...)):
+async def predict_graphs(video_file: UploadFile = File(...)):
     video_data = await video_file.read()
     temp_video_file_path = create_temp_file_return_path(video_data)
     frames = extract(temp_video_file_path)
@@ -84,7 +84,7 @@ async def predict_coordinates(video_file: UploadFile = File(...)):
 
 
 @model_router.post("/predict_combined")
-async def predict_coordinates(video_file: UploadFile = File(...)):
+async def predict_combined(video_file: UploadFile = File(...)):
     video_data = await video_file.read()
     temp_video_file_path = create_temp_file_return_path(video_data)
     frames = extract(temp_video_file_path)
@@ -151,6 +151,24 @@ def convert_list_data_to_dict(data: list):
                 frame_data.relative[1],
                 frame_data.relative[2],
                 frame_data.direct_graph
+            ]
+            frame_data_by_landmark[landmark].append(frame_data_list)
+        dict_data[f"frame{i}"] = frame_data_by_landmark
+    return dict_data
+
+
+def convert_list_data_to_dict_cords(data: list):
+    dict_data = {}
+    for i, item in enumerate(data, start=1):
+        frame_data_by_landmark = {}
+        for frame_data in item:
+            landmark = "Landmark" + str(frame_data.landmark + 1)
+            if landmark not in frame_data_by_landmark:
+                frame_data_by_landmark[landmark] = []
+            frame_data_list = [
+                frame_data.relative[0],
+                frame_data.relative[1],
+                frame_data.relative[2],
             ]
             frame_data_by_landmark[landmark].append(frame_data_list)
         dict_data[f"frame{i}"] = frame_data_by_landmark

@@ -19,4 +19,4 @@ def test_upload_video(subpath: str = ''):
 
 
 if __name__ == "__main__":
-    test_upload_video("combined")
+    test_upload_video("coordinates")
