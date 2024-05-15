@@ -6,8 +6,6 @@ from training import load_coordinate_data, load_graph_data, load_combined_data, 
 from dotenv import load_dotenv
 
 
-
-
 def run(arg: str = '', cb=None):
     if arg == '':
         raise ValueError("Invalid argument")
@@ -61,4 +59,4 @@ def extract_time_metrics():
 
 if __name__ == '__main__':
     load_dotenv()
-    extract_model_metrics()
+    run_with_test_data()

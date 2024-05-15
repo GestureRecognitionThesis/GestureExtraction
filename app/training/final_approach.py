@@ -9,6 +9,10 @@ from keras.src.saving.saving_api import save_model, load_model
 from keras.src.utils import pad_sequences
 from sklearn.metrics import f1_score, precision_score, recall_score
 from time import perf_counter
+
+from training import process_mp
+
+from . import extract
 from .utils import string_to_float32
 
 
@@ -385,29 +389,91 @@ def test_data_prediction():
     for model in models:
         for suffix in suffixes:
             model_path = f"{model}_{suffix}.keras"
-            model = load_model(model_path)
+            print(f"Model used: {model_path}")
+            m = load_model(model_path)
             files: list = os.listdir(path_prefix)
             for file in files:
                 data_path = f'{path_prefix}{file}'
-                data, file_name = load_json_data(data_path)
+                frames = extract(data_path)
+                all_data: list = []
+                for frame in frames:
+                    all_data.append(process_mp(frame))
+                file_name = data_path.split("/")[-1].split(".")[0]
+                file_name = ''.join([i for i in file_name if not i.isdigit()])
                 result = None
-                if 'coordinates' in model:
-                    result = transform_data_to_sequence_coordinates(data)
-                elif 'graphs' in model:
-                    result = transform_data_to_sequence_graphs(data)
-                elif 'combined' in model:
-                    result = transform_data_to_sequence_combine(data)
+                if 'coordinates' in model_path:
+                    data_dict = convert_list_data_to_dict_cords(all_data)
+                    result = transform_data_to_sequence_coordinates(data_dict)
+                elif 'graphs' in model_path:
+                    data_dict = convert_list_data_to_dict_graphs(all_data)
+                    result = transform_data_to_sequence_graphs(data_dict)
+                elif 'combined' in model_path:
+                    data_dict = convert_list_data_to_dict(all_data)
+                    result = transform_data_to_sequence_combine(data_dict)
                 if result is None:
                     raise ValueError("Invalid prefix")
                 sequences = [result]
-                max_seq_length = sequence_lengths[f"{model}{suffix}"]
+                i1, i2 = model_path.split("_")[0], model_path.split("_")[1].split(".")[0]
+                max_seq_length = sequence_lengths[i1+i2]
                 padded_sequences = pad_sequences(sequences, maxlen=max_seq_length, padding='post', dtype="float32")
-                prediction = model.predict(padded_sequences)
+                prediction = m.predict(padded_sequences)
                 predicted_labels = np.argmax(prediction, axis=1)
                 class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
                 results.append(
-                    [file_name, class_labels[predicted_labels[0]], file_name == class_labels[predicted_labels[0]]])
+                    [model_path, file_name, class_labels[predicted_labels[0]], file_name == class_labels[predicted_labels[0]]])
     return results
+
+
+def convert_list_data_to_dict(data: list):
+    dict_data = {}
+    for i, item in enumerate(data, start=1):
+        frame_data_by_landmark = {}
+        for frame_data in item:
+            landmark = "Landmark" + str(frame_data.landmark + 1)
+            if landmark not in frame_data_by_landmark:
+                frame_data_by_landmark[landmark] = []
+            frame_data_list = [
+                frame_data.relative[0],
+                frame_data.relative[1],
+                frame_data.relative[2],
+                frame_data.direct_graph
+            ]
+            frame_data_by_landmark[landmark].append(frame_data_list)
+        dict_data[f"frame{i}"] = frame_data_by_landmark
+    return dict_data
+
+
+def convert_list_data_to_dict_cords(data: list):
+    dict_data = {}
+    for i, item in enumerate(data, start=1):
+        frame_data_by_landmark = {}
+        for frame_data in item:
+            landmark = "Landmark" + str(frame_data.landmark + 1)
+            if landmark not in frame_data_by_landmark:
+                frame_data_by_landmark[landmark] = []
+            frame_data_list = [
+                frame_data.relative[0],
+                frame_data.relative[1],
+                frame_data.relative[2],
+            ]
+            frame_data_by_landmark[landmark].append(frame_data_list)
+        dict_data[f"frame{i}"] = frame_data_by_landmark
+    return dict_data
+
+
+def convert_list_data_to_dict_graphs(data: list):
+    dict_data = {}
+    for i, item in enumerate(data, start=1):
+        frame_data_by_landmark = {}
+        for frame_data in item:
+            landmark = "Landmark" + str(frame_data.landmark + 1)
+            if landmark not in frame_data_by_landmark:
+                frame_data_by_landmark[landmark] = []
+            frame_data_list = frame_data.direct_graph
+
+            frame_data_by_landmark[landmark] = frame_data_list
+        dict_data[f"frame{i}"] = frame_data_by_landmark
+    return dict_data
 
 
 sequence_lengths: dict = {
