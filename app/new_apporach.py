@@ -61,4 +61,4 @@ def extract_time_metrics():
 
 if __name__ == '__main__':
     load_dotenv()
-    run_with_test_data()
+    extract_model_metrics()

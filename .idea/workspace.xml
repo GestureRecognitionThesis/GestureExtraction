@@ -4,50 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Experiment data">
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can21.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can22.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can23.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can24.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can27.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can28.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can29.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can30.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can31.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can32.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can33.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can34.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can35.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can36.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can37.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can38.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can39.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can40.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can42.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/final/testing/can43.MOV" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Test-train data added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can1.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can10.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can11.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can12.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can13.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can14.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can15.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can16.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can17.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can18.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can19.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can2.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can20.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can3.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can4.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can5.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can6.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can7.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can8.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/final/testing/can9.MOV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_metrics.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/new_apporach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/new_apporach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test_train_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/test_train_metrics.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/training/final_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/training/final_approach.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,7 +281,7 @@
       <workItem from="1715789806470" duration="3422000" />
       <workItem from="1715803321495" duration="2395000" />
       <workItem from="1715807774746" duration="4395000" />
-      <workItem from="1715857766194" duration="4557000" />
+      <workItem from="1715857766194" duration="7488000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -635,7 +595,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715814103450</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Test-train data added">
+      <option name="closed" value="true" />
+      <created>1715863288527</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1715863288527</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added more videos for training" />
     <MESSAGE value="Progress bar and more json files" />
     <MESSAGE value="Trained new gesture model" />
     <MESSAGE value="Added code to load test predictions" />
@@ -681,11 +648,12 @@
     <MESSAGE value="stuff" />
     <MESSAGE value="Ready for model evaluation" />
     <MESSAGE value="Experiment data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Experiment data" />
+    <MESSAGE value="Test-train data added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test-train data added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715860272205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715867387013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

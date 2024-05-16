@@ -235,7 +235,7 @@ def load_graph_data(save: bool = False, amount: int = 25, metrics: bool = False,
             print("Saving model metrics")
             with open("model_metrics.csv", "a", newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow([f"coordinates{amount}", loss[-1], accuracy[-1], f1, precision, recall])
+                writer.writerow([f"graphs{amount}", loss[-1], accuracy[-1], f1, precision, recall])
 
     if save:
         file_name = f"graphs_{amount}.keras"
@@ -327,7 +327,7 @@ def load_combined_data(save: bool = False, amount: int = 25, metrics: bool = Fal
             print("Saving model metrics")
             with open("model_metrics.csv", "a", newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow([f"coordinates{amount}", loss[-1], accuracy[-1], f1, precision, recall])
+                writer.writerow([f"combined{amount}", loss[-1], accuracy[-1], f1, precision, recall])
 
     if save:
         file_name = f"combined_{amount}.keras"
