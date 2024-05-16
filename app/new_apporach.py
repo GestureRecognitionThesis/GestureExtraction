@@ -30,7 +30,9 @@ def run(arg: str = '', cb=None):
 def run_with_test_data():
     results = test_data_prediction()
     for r in results:
-        print(r)
+        with open("test_train_metrics.csv", "a", newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(r)
 
 
 def extract_model_metrics():

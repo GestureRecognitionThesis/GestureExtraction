@@ -420,7 +420,7 @@ def test_data_prediction():
                 predicted_labels = np.argmax(prediction, axis=1)
                 class_labels = {0: "Can", 1: "Peace", 2: "Thumb"}
                 results.append(
-                    [model_path, file_name, class_labels[predicted_labels[0]], file_name == class_labels[predicted_labels[0]]])
+                    [model_path, file_name, class_labels[predicted_labels[0]], file_name == class_labels[predicted_labels[0]].lower()])
     return results
 
 
