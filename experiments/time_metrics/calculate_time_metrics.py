@@ -8,7 +8,7 @@ from presentation import convert_list_data_to_dict_graphs, convert_list_data_to_
 from training import extract, transform_data_to_sequence_coordinates, transform_data_to_sequence_combine, \
     transform_data_to_sequence_graphs, calculate_graphs
 from app.training import process_mp
-from time import perf_counter
+from time import perf_counter_ns as perf_counter
 
 
 def convert_list_data_to_dict_cords(data: list):

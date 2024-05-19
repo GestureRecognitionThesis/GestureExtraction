@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="metrics">
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/calculate_time_metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/can39.MOV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_100.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_25.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_50.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_100.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_25.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_50.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/gesture_recognition_model.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graph_gesture_model.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graph_model.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_100.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_25.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_50.keras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/time_metrics.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Recognizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Recognizer.iml" afterDir="false" />
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="calculated total times for processing">
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/test_request_speed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/time_metrics2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/time_metrics/calculate_time_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/time_metrics/calculate_time_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/time_metrics/time_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/time_metrics/time_metrics.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +60,14 @@
     "Python.main.executor": "Run",
     "Python.model_main.executor": "Run",
     "Python.new_apporach.executor": "Run",
+    "Python.test_request_speed.executor": "Run",
     "Python.test_requests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/experiments",
+    "last_opened_file_path": "C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/experiments/time_metrics",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,11 +79,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments\time_metrics" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\paddings" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\models" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\100" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\50" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments\time_metrics" />
@@ -105,7 +93,7 @@
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\mods" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.calculate_time_metrics (1)">
+  <component name="RunManager" selected="Python.test_request_speed">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="ENV_FILES" value="" />
@@ -221,7 +209,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_request_speed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,12 +218,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/load_testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/time_metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/load_testing/test_requests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/time_metrics/test_request_speed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -246,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_request_speed" />
+        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.calculate_time_metrics (1)" />
         <item itemvalue="Python.calculate_time_metrics" />
         <item itemvalue="Python.new_apporach" />
-        <item itemvalue="Python.test_requests" />
-        <item itemvalue="Python.__main__" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +288,8 @@
       <workItem from="1715857766194" duration="9664000" />
       <workItem from="1716032324680" duration="630000" />
       <workItem from="1716066959342" duration="457000" />
-      <workItem from="1716067519354" duration="4356000" />
+      <workItem from="1716067519354" duration="5110000" />
+      <workItem from="1716120234907" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -638,7 +627,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715901721666</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="added new time metrics - done right this time">
+      <option name="closed" value="true" />
+      <created>1716077293158</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1716077293158</updated>
+    </task>
+    <task id="LOCAL-00044" summary="calculated total times for processing">
+      <option name="closed" value="true" />
+      <created>1716077530687</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716077530687</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,8 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trained new gesture model" />
-    <MESSAGE value="Added code to load test predictions" />
     <MESSAGE value="Added graph extraction for new approach" />
     <MESSAGE value="Model based on graph data can now be trained" />
     <MESSAGE value="Forgot to actually produce the model" />
@@ -684,19 +687,22 @@
     <MESSAGE value="Experiment data" />
     <MESSAGE value="Test-train data added" />
     <MESSAGE value="metrics" />
-    <option name="LAST_COMMIT_MESSAGE" value="metrics" />
+    <MESSAGE value="added new time metrics - done right this time" />
+    <MESSAGE value="calculated total times for processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculated total times for processing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GestureExtraction$calculate_time_metrics__1_.coverage" NAME="calculate_time_metrics (1) Coverage Results" MODIFIED="1716077109978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/time_metrics" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715867502354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$calculate_time_metrics.coverage" NAME="calculate_time_metrics Coverage Results" MODIFIED="1716067168508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames__1_.coverage" NAME="extract_frames (1) Coverage Results" MODIFIED="1708348134932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playground" />
     <SUITE FILE_PATH="coverage/Recognizer$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271393880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
-    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1715810957847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1716125592150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$calculate_time_metrics__1_.coverage" NAME="calculate_time_metrics (1) Coverage Results" MODIFIED="1716123522815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/time_metrics" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$test_request_speed.coverage" NAME="test_request_speed Coverage Results" MODIFIED="1716125659242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/time_metrics" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715867502354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$test_requests.coverage" NAME="test_requests Coverage Results" MODIFIED="1715810964488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
   </component>
 </project>
