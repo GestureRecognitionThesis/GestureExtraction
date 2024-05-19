@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="Test-train data added">
+    <list default="true" id="32e6e03c-3308-4405-bd6d-29d3995b4351" name="Changes" comment="metrics">
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/calculate_time_metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/can39.MOV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/combined_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/coordinates_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/gesture_recognition_model.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graph_gesture_model.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graph_model.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_100.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_25.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/graphs_50.keras" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/time_metrics/time_metrics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Recognizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Recognizer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,46 +64,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.extract_frames.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.new_apporach.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_requests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/app/data/final/paddings&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__main__.executor": "Run",
+    "Python.calculate_time_metrics (1).executor": "Run",
+    "Python.calculate_time_metrics.executor": "Run",
+    "Python.extract_frames.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.model_main.executor": "Run",
+    "Python.new_apporach.executor": "Run",
+    "Python.test_requests.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Nicholas/Desktop/Master Thesis/Development/GestureExtraction/experiments",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\paddings" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\models" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\100" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\combined\50" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\graphs\25" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments\time_metrics" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\data\final\testing" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\training" />
       <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\mods" />
-      <recent name="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\app\presentation\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.new_apporach">
+  <component name="RunManager" selected="Python.calculate_time_metrics (1)">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="ENV_FILES" value="" />
@@ -110,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extract_frames (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="calculate_time_metrics (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Recognizer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,12 +138,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/playground" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/time_metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/playground/extract_frames.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/time_metrics/calculate_time_metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calculate_time_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recognizer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Nicholas\Desktop\Master Thesis\Development\GestureExtraction\experiments\time_metrics\calculate_time_metrics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,29 +190,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="model_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Recognizer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/model_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.calculate_time_metrics (1)" />
+        <item itemvalue="Python.calculate_time_metrics" />
         <item itemvalue="Python.new_apporach" />
         <item itemvalue="Python.test_requests" />
         <item itemvalue="Python.__main__" />
-        <item itemvalue="Python.model_main" />
-        <item itemvalue="Python.extract_frames (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +297,10 @@
       <workItem from="1715789806470" duration="3422000" />
       <workItem from="1715803321495" duration="2395000" />
       <workItem from="1715807774746" duration="4395000" />
-      <workItem from="1715857766194" duration="9648000" />
+      <workItem from="1715857766194" duration="9664000" />
+      <workItem from="1716032324680" duration="630000" />
+      <workItem from="1716066959342" duration="457000" />
+      <workItem from="1716067519354" duration="4356000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore">
       <option name="closed" value="true" />
@@ -608,7 +630,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715867730502</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="metrics">
+      <option name="closed" value="true" />
+      <created>1715901721666</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1715901721666</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +659,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Progress bar and more json files" />
     <MESSAGE value="Trained new gesture model" />
     <MESSAGE value="Added code to load test predictions" />
     <MESSAGE value="Added graph extraction for new approach" />
@@ -654,11 +683,14 @@
     <MESSAGE value="Ready for model evaluation" />
     <MESSAGE value="Experiment data" />
     <MESSAGE value="Test-train data added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test-train data added" />
+    <MESSAGE value="metrics" />
+    <option name="LAST_COMMIT_MESSAGE" value="metrics" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GestureExtraction$calculate_time_metrics__1_.coverage" NAME="calculate_time_metrics (1) Coverage Results" MODIFIED="1716077109978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/time_metrics" />
     <SUITE FILE_PATH="coverage/GestureExtraction$model_main.coverage" NAME="model_main Coverage Results" MODIFIED="1714230395023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/GestureExtraction$new_apporach.coverage" NAME="new_apporach Coverage Results" MODIFIED="1715867502354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/GestureExtraction$calculate_time_metrics.coverage" NAME="calculate_time_metrics Coverage Results" MODIFIED="1716067168508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/GestureExtraction$load_main.coverage" NAME="test_requests Coverage Results" MODIFIED="1712320735956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/load_testing" />
     <SUITE FILE_PATH="coverage/GestureExtraction$extract_frames.coverage" NAME="extract_frames Coverage Results" MODIFIED="1708271961845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/Recognizer$main.coverage" NAME="main Coverage Results" MODIFIED="1708269102384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
